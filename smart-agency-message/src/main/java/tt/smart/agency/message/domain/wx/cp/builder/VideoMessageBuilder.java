@@ -30,7 +30,7 @@ public class VideoMessageBuilder extends BaseMessageBuilder<VideoMessageBuilder>
     private String description;
 
     public VideoMessageBuilder() {
-        this.msgType = WxCpMessageType.IMAGE;
+        this.msgType = WxCpMessageType.VIDEO;
     }
 
     public VideoMessageBuilder mediaId(String mediaId) {

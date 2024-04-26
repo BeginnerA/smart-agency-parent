@@ -178,7 +178,9 @@ public class WxCpMessage extends WxCpBaseMessage {
                 break;
             }
             case VOICE: {
-                System.out.print("待做：语音消息");
+                JSONObject voice = new JSONObject();
+                voice.put("media_id", this.getMediaId());
+                messageJson.put("voice", voice);
                 break;
             }
             case VIDEO: {
