@@ -182,7 +182,11 @@ public class WxCpMessage extends WxCpBaseMessage {
                 break;
             }
             case VIDEO: {
-                System.out.print("待做：视频消息");
+                JSONObject video = new JSONObject();
+                video.put("media_id", this.getMediaId());
+                video.put("title", this.getTitle());
+                video.put("description", this.getDescription());
+                messageJson.put("video", video);
                 break;
             }
             case NEWS: {
