@@ -27,6 +27,10 @@ public class WxCpMessage extends WxCpBaseMessage {
      * 图文消息，一个图文消息支持1到8条图文
      */
     private List<NewArticle> articles;
+    /**
+     * 图文消息，一个图文消息支持1到8条图文
+     */
+    private List<MpnewsArticle> mpArticles;
 
     // ======================================== 文本信息 ========================================
     /**
@@ -102,6 +106,15 @@ public class WxCpMessage extends WxCpBaseMessage {
      */
     public static NewsMessageBuilder newsMsg() {
         return new NewsMessageBuilder();
+    }
+
+    /**
+     * 获取图片图文消息构建器
+     *
+     * @return 图文消息构建器
+     */
+    public static MpnewsMessageBuilder mpnewsMsg() {
+        return new MpnewsMessageBuilder();
     }
 
     /**
@@ -251,7 +264,24 @@ public class WxCpMessage extends WxCpBaseMessage {
                 break;
             }
             case MPNEWS: {
-                System.out.print("待做：图文消息（点击跳转到图文消息页面）");
+                JSONObject mpnews = new JSONObject();
+                if (this.getMediaId() != null) {
+                    mpnews.put("media_id", this.getMediaId());
+                } else {
+                    JSONArray articles = new JSONArray();
+                    for (MpnewsArticle article : this.getMpArticles()) {
+                        JSONObject articleJson = new JSONObject();
+                        articleJson.put("title", article.getTitle());
+                        articleJson.put("thumb_media_id", article.getThumbMediaId());
+                        articleJson.put("author", article.getAuthor());
+                        articleJson.put("content_source_url", article.getContentSourceUrl());
+                        articleJson.put("content", article.getContent());
+                        articleJson.put("digest", article.getDigest());
+                        articles.add(articleJson);
+                    }
+                    mpnews.put("articles", articles);
+                }
+                messageJson.put("mpnews", mpnews);
                 break;
             }
             case TASKCARD: {
