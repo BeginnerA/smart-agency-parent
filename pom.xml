@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 基础信息 -->
+    <groupId>tt.smart.agency</groupId>
+    <artifactId>smart-agency-parent</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <!-- 项目介绍 -->
+    <name>smart-agency</name>
+    <description>它是一个聪明的中介</description>
+    <url>https://blog.csdn.net/qq_39035773</url>
+
+    <!-- 开源协议 apache 2.0 -->
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <!-- 仓库信息 -->
+    <scm>
+        <tag>master</tag>
+        <url>https://github.com/BeginnerA/reid-smart-agency.git</url>
+        <connection>scm:git:https://github.com/BeginnerA/reid-smart-agency.git</connection>
+        <developerConnection>scm:git:https://github.com/BeginnerA/reid-smart-agency.git</developerConnection>
+    </scm>
+
+    <!-- 作者信息 -->
+    <developers>
+        <developer>
+            <name>Reid Yang</name>
+            <email>184010001@qq.com</email>
+        </developer>
+    </developers>
+
+    <!-- 属性配置 -->
+    <properties>
+        <revision>0.0.1-SNAPSHOT</revision>
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+    </properties>
+
+    <!-- 所有模块 -->
+    <modules>
+        <module>smart-agency-dependencies</module>
+        <module>smart-agency-cache</module>
+        <module>smart-agency-mq</module>
+        <module>smart-agency-netty</module>
+        <module>smart-agency-message</module>
+        <module>smart-agency-tools</module>
+    </modules>
+
+    <!-- 仓库依赖 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>tt.smart.agency</groupId>
+                <artifactId>smart-agency-dependencies</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- 项目构建 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.12.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 统一版本号管理 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

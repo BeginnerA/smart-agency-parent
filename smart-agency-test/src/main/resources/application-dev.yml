@@ -1,0 +1,71 @@
+server:
+  port: 8888
+
+# spring
+spring:
+  application:
+    name: springboot-smart-agency-test
+  data:
+    # redis 配置
+    redis:
+      database: 0
+      host: 192.168.3.33
+      lettuce:
+        pool:
+          # 最大连接数据库连接数,设-1为没有限制
+          max-active: 8
+          # 最大等待连接中的数量,设0为没有限制
+          max-idle: 8
+          # 最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+          max-wait: -1ms
+          # 最小等待连接中的数量,设0为没有限制
+          min-idle: 0
+        shutdown-timeout: 100ms
+      password: 'Sissi.01'
+      port: 6379
+
+# 配置日志
+logging:
+  # 日志 logback 配置文件
+  config: classpath:logback-spring.xml
+  # 日志级别 ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+  level:
+    root: WARN
+
+# agency
+agency:
+#  cache:
+#    cacheType: REDIS
+  message:
+    dd:
+      app-key: xxxxxxxx
+      app-secret: xxxxxxxx
+    wx:
+      mp:
+        app-id: xxxxxxxx
+        secret: xxxxxxxx
+      cp:
+        corp-id: xxxxxxxx
+        corp-secret: xxxxxxxx
+    sms:
+      alibaba:
+        access-key: xxxxxxxx
+        access-key-secret: xxxxxxxx
+        signature: xxx的博客
+        template-id: xxxxxxxx
+        templateName: code
+      huawei:
+        # 华为短信 appKey
+        access-key: xxxxxxxx
+        # 华为短信 appSecret
+        access-key-secret: xxxxxxxx
+        # 短信签名
+        signature: 华为短信测试
+        # 通道号
+        sender: xxxxxxxx
+        # 模板 ID 如果使用自定义模板推送方法可不设定
+        template-id: xxxxxxxx
+        # 华为回调地址，如不需要可不设置或为空
+        status-call-back:
+        # 华为分配的 app 请求地址
+        url: https://smsapi.cn-north-4.myhuaweicloud.com:443

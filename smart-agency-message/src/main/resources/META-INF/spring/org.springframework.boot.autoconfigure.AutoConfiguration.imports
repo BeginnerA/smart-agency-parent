@@ -1,0 +1,5 @@
+tt.smart.agency.message.config.AutoConfiguration
+tt.smart.agency.message.component.config.MessageComponentConfig
+tt.smart.agency.message.component.strategy.MessageAsyncProvider
+tt.smart.agency.message.component.strategy.MessagePushStrategyFactory
+tt.smart.agency.message.component.annotation.MessageStrategyAspect

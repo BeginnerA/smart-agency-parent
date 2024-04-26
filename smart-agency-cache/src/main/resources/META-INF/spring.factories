@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  tt.smart.agency.cache.config.AutoConfiguration

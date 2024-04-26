@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>tt.smart.agency</groupId>
+        <artifactId>smart-agency-parent</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <packaging>jar</packaging>
+    <artifactId>smart-agency-test</artifactId>
+    <name>${project.artifactId}</name>
+    <description>单元测试</description>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!-- 工具 -->
+        <dependency>
+            <groupId>tt.smart.agency</groupId>
+            <artifactId>smart-agency-tools</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <!-- 缓存策略 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-json</artifactId>
+        </dependency>
+        <!-- smart-agency -->
+        <dependency>
+            <groupId>tt.smart.agency</groupId>
+            <artifactId>smart-agency-cache</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>tt.smart.agency</groupId>
+            <artifactId>smart-agency-message</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 单元测试报告生成 -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.11</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report-aggregate</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <!-- 命令行执行 mvn test 时默认字符集为GBK，与项目设置的utf-8造成冲突，所以这里需要指定字符集为utf-8 -->
+                    <!--suppress UnresolvedMavenProperty -->
+                    <argLine>${argLine} -Xms256m -Xmx2048m -Dfile.encoding=utf-8</argLine>
+                    <forkCount>1</forkCount>
+                    <runOrder>random</runOrder>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
