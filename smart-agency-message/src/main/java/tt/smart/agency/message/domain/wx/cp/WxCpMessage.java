@@ -4,6 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson2.JSONObject;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import tt.smart.agency.message.domain.wx.cp.builder.ImageMessageBuilder;
 import tt.smart.agency.message.domain.wx.cp.builder.TextCardMessageBuilder;
 import tt.smart.agency.message.domain.wx.cp.builder.TextMessageBuilder;
 
@@ -25,6 +26,12 @@ public class WxCpMessage extends WxCpBaseMessage {
      * 消息内容，最长不超过2048个字节，超过将截断（支持 ID 转译）
      */
     private String content;
+
+    // ======================================== 图片信息 ========================================
+    /**
+     * 图片媒体文件 ID，可以调用上传临时素材接口获取
+     */
+    private String mediaId;
 
     // ======================================== 文本卡片信息 ========================================
     /**
@@ -73,6 +80,15 @@ public class WxCpMessage extends WxCpBaseMessage {
     }
 
     /**
+     * 获取图片消息构建器
+     *
+     * @return 图片消息构建器
+     */
+    public static ImageMessageBuilder imageMsg() {
+        return new ImageMessageBuilder();
+    }
+
+    /**
      * 获取文本卡片消息构建器
      *
      * @return 文本卡片消息构建器
@@ -104,6 +120,10 @@ public class WxCpMessage extends WxCpBaseMessage {
             messageJson.put("enable_id_trans", 1);
         }
 
+        if (this.getSafe()) {
+            messageJson.put("safe", 1);
+        }
+
         if (this.getEnableDuplicateCheck()) {
             messageJson.put("enable_duplicate_check", 1);
         }
@@ -113,10 +133,6 @@ public class WxCpMessage extends WxCpBaseMessage {
         }
 
         this.handleMsgType(messageJson);
-
-        if (StrUtil.isNotBlank(this.getSafe())) {
-            messageJson.put("safe", this.getSafe());
-        }
 
         return messageJson.toString();
     }
@@ -144,11 +160,15 @@ public class WxCpMessage extends WxCpBaseMessage {
                 break;
             }
             case MARKDOWN: {
-                System.out.print("待做：markdown 消息");
+                JSONObject text = new JSONObject();
+                text.put("content", this.getContent());
+                messageJson.put("markdown", text);
                 break;
             }
             case IMAGE: {
-                System.out.print("待做：图片消息");
+                JSONObject image = new JSONObject();
+                image.put("media_id", this.getMediaId());
+                messageJson.put("image", image);
                 break;
             }
             case FILE: {

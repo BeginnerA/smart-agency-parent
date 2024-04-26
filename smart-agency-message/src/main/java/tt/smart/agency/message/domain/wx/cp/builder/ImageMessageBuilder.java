@@ -5,33 +5,33 @@ import tt.smart.agency.message.enums.wx.WxCpMessageType;
 
 /**
  * <p>
- * 企业微信文本消息构建器：
+ * 企业微信图片消息构建器：
  * <a href="https://developer.work.weixin.qq.com/document/path/90236">详情参考</a>
  * </p>
  *
  * @author YangMC
  * @version V1.0
  **/
-public class TextMessageBuilder extends BaseMessageBuilder<TextMessageBuilder> {
+public class ImageMessageBuilder extends BaseMessageBuilder<ImageMessageBuilder> {
 
     /**
-     * 消息内容，最长不超过2048个字节，超过将截断（支持 ID 转译）
+     * 图片媒体文件 ID，可以调用上传临时素材接口获取
      */
-    private String content;
+    private String mediaId;
 
-    public TextMessageBuilder() {
-        this.msgType = WxCpMessageType.TEXT;
+    public ImageMessageBuilder() {
+        this.msgType = WxCpMessageType.IMAGE;
     }
 
-    public TextMessageBuilder content(String content) {
-        this.content = content;
+    public ImageMessageBuilder mediaId(String mediaId) {
+        this.mediaId = mediaId;
         return this;
     }
 
     @Override
     public WxCpMessage build() {
         WxCpMessage msg = super.build();
-        msg.setContent(this.content);
+        msg.setTitle(this.mediaId);
         return msg;
     }
 }

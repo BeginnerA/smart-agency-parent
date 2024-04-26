@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import tt.smart.agency.message.api.wx.WxCpApplyMessage;
 import tt.smart.agency.message.domain.wx.cp.WxCpMessage;
 import tt.smart.agency.message.domain.wx.cp.WxCpMessageSendResult;
+import tt.smart.agency.message.factory.wx.WxMessageFactory;
 
 /**
  * <p>
@@ -56,6 +57,21 @@ public class WxCpMessageTest {
     }
 
     /**
+     * 测试企业微信图片消息
+     */
+    @Test
+    public void testWxCpImageMessage() {
+        // 图片消息
+        WxCpMessage textMsg = WxCpMessage.imageMsg()
+                .agentId("1000002")
+                .toUser("YangMingChun")
+                .mediaId("MEDIA_ID")
+                .build();
+        WxCpMessageSendResult messageSendResult = WxMessageFactory.createWxCpMessageBlend().sendMessage(textMsg);
+        System.out.print("结果：" + messageSendResult);
+    }
+
+    /**
      * 测试企业微信卡片消息
      */
     @Test
@@ -70,8 +86,7 @@ public class WxCpMessageTest {
                 .url("http://www.qq.com")
                 .btnTxt("更多")
                 .build();
-//        WxCpMessageSendResult messageSendResult = WxMessageFactory.createWxCpMessageBlend().sendMessage(textCardMsg);
-        WxCpMessageSendResult messageSendResult = wxCpApplyMessage.sendMessage(textCardMsg);
+        WxCpMessageSendResult messageSendResult = WxMessageFactory.createWxCpMessageBlend().sendMessage(textCardMsg);
         System.out.print("结果：" + messageSendResult);
     }
 
