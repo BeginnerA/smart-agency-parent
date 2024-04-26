@@ -77,7 +77,7 @@ public class WxCpMessageTest {
     @Test
     public void testWxCpCardMessage() {
         // 文本卡片消息
-        WxCpMessage textCardMsg = WxCpMessage.textCard()
+        WxCpMessage textCardMsg = WxCpMessage.textCardMsg()
                 .agentId("1000002")
                 .toUser("YangMingChun")
                 .title("领奖通知")

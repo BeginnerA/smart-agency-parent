@@ -1,12 +1,13 @@
 package tt.smart.agency.message.domain.wx.cp;
 
 import cn.hutool.core.util.StrUtil;
+import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import tt.smart.agency.message.domain.wx.cp.builder.ImageMessageBuilder;
-import tt.smart.agency.message.domain.wx.cp.builder.TextCardMessageBuilder;
-import tt.smart.agency.message.domain.wx.cp.builder.TextMessageBuilder;
+import tt.smart.agency.message.domain.wx.cp.builder.*;
+
+import java.util.List;
 
 /**
  * <p>
@@ -20,6 +21,12 @@ import tt.smart.agency.message.domain.wx.cp.builder.TextMessageBuilder;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class WxCpMessage extends WxCpBaseMessage {
+
+    // ======================================== 图文信息 ========================================
+    /**
+     * 图文消息，一个图文消息支持1到8条图文
+     */
+    private List<NewArticle> articles;
 
     // ======================================== 文本信息 ========================================
     /**
@@ -71,12 +78,12 @@ public class WxCpMessage extends WxCpBaseMessage {
     private Integer duplicateCheckInterval;
 
     /**
-     * 获取文本消息构建器
+     * 获取文件消息构建器
      *
-     * @return 文本消息构建器
+     * @return 文件消息构建器
      */
-    public static TextMessageBuilder textMsg() {
-        return new TextMessageBuilder();
+    public static FileMessageBuilder fileMsg() {
+        return new FileMessageBuilder();
     }
 
     /**
@@ -89,12 +96,48 @@ public class WxCpMessage extends WxCpBaseMessage {
     }
 
     /**
+     * 获取图片图文消息构建器
+     *
+     * @return 图文消息构建器
+     */
+    public static NewsMessageBuilder newsMsg() {
+        return new NewsMessageBuilder();
+    }
+
+    /**
      * 获取文本卡片消息构建器
      *
      * @return 文本卡片消息构建器
      */
-    public static TextCardMessageBuilder textCard() {
+    public static TextCardMessageBuilder textCardMsg() {
         return new TextCardMessageBuilder();
+    }
+
+    /**
+     * 获取文本消息构建器
+     *
+     * @return 文本消息构建器
+     */
+    public static TextMessageBuilder textMsg() {
+        return new TextMessageBuilder();
+    }
+
+    /**
+     * 获取视频消息构建器
+     *
+     * @return 视频消息构建器
+     */
+    public static VideoMessageBuilder videoMsg() {
+        return new VideoMessageBuilder();
+    }
+
+    /**
+     * 获取语音消息构建器
+     *
+     * @return 语音消息构建器
+     */
+    public static VoiceMessageBuilder voiceMsg() {
+        return new VoiceMessageBuilder();
     }
 
     public String toJson() {
@@ -151,18 +194,18 @@ public class WxCpMessage extends WxCpBaseMessage {
                 break;
             }
             case TEXTCARD: {
-                JSONObject text = new JSONObject();
-                text.put("title", this.getTitle());
-                text.put("description", this.getDescription());
-                text.put("url", this.getUrl());
-                text.put("btntxt", this.getBtnTxt());
-                messageJson.put("textcard", text);
+                JSONObject textCard = new JSONObject();
+                textCard.put("title", this.getTitle());
+                textCard.put("description", this.getDescription());
+                textCard.put("url", this.getUrl());
+                textCard.put("btntxt", this.getBtnTxt());
+                messageJson.put("textcard", textCard);
                 break;
             }
             case MARKDOWN: {
-                JSONObject text = new JSONObject();
-                text.put("content", this.getContent());
-                messageJson.put("markdown", text);
+                JSONObject markdown = new JSONObject();
+                markdown.put("content", this.getContent());
+                messageJson.put("markdown", markdown);
                 break;
             }
             case IMAGE: {
@@ -192,7 +235,19 @@ public class WxCpMessage extends WxCpBaseMessage {
                 break;
             }
             case NEWS: {
-                System.out.print("待做：图文消息（点击跳转到外链）");
+                JSONObject news = new JSONObject();
+                JSONArray articles = new JSONArray();
+                for (NewArticle article : this.getArticles()) {
+                    JSONObject articleJson = new JSONObject();
+                    articleJson.put("title", article.getTitle());
+                    articleJson.put("description", article.getDescription());
+                    articleJson.put("url", article.getUrl());
+                    articleJson.put("picurl", article.getPicUrl());
+                    articleJson.put("btntxt", article.getBtnText());
+                    articles.add(articleJson);
+                }
+                news.put("articles", articles);
+                messageJson.put("news", news);
                 break;
             }
             case MPNEWS: {
