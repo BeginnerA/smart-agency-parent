@@ -36,12 +36,12 @@ public class MessageStrategyAspect {
     }
 
     @Around(value = "pointCut()")
-    public Object round(ProceedingJoinPoint joinPoint) {
+    public Object round(ProceedingJoinPoint joinPoint) throws Throwable {
         Object[] args = joinPoint.getArgs();
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         MessageStrategy strategyAnnotation = signature.getMethod().getAnnotation(MessageStrategy.class);
         Object result = null;
-        boolean proceedExecuted = false;
+        int proceedExecuted = 0;
         try {
             ParameterContextModel parameterContext = new ParameterContextModel();
             parameterContext.setIdents(strategyAnnotation.idents());
@@ -49,22 +49,26 @@ public class MessageStrategyAspect {
             if (NotificationPolicyEnum.BEFORE.equals(strategyAnnotation.policy())) {
                 messagePushStrategyFactory.pushMessage(strategyAnnotation.strategy(), parameterContext, strategyAnnotation.isAsync());
             }
-
+            proceedExecuted++;
             result = executiveMasterMethod(joinPoint);
             // 标记已经执行了 proceed 方法
-            proceedExecuted = true;
+            proceedExecuted++;
 
             if (NotificationPolicyEnum.AFTER.equals(strategyAnnotation.policy())) {
                 parameterContext.setReturnValue(getResultData(joinPoint, result));
                 messagePushStrategyFactory.pushMessage(strategyAnnotation.strategy(), parameterContext, strategyAnnotation.isAsync());
             }
-        } catch (Exception e) {
-            // 防止在主方法未执行前出错
-            if (!proceedExecuted) {
+        } catch (Throwable e) {
+            if (proceedExecuted == 0) {
+                // 防止在主方法未执行前出错
                 result = executiveMasterMethod(joinPoint);
+            } else if (proceedExecuted == 1) {
+                // 执行主方法出错抛出原异常
+                throw e;
+            } else {
+                // 捕获消息抛出异常，防止消息异常影响正常业务执行
+                log.error("消息推送失败", e);
             }
-            // 捕获抛出异常，防止消息异常影响正常业务执行
-            log.error("消息推送失败", e);
         }
         return result;
     }
@@ -102,12 +106,13 @@ public class MessageStrategyAspect {
      * @param joinPoint ProceedingJoinPoint
      * @return 执行结果
      */
-    private Object executiveMasterMethod(ProceedingJoinPoint joinPoint) {
-        Object result = null;
+    private Object executiveMasterMethod(ProceedingJoinPoint joinPoint) throws Throwable {
+        Object result;
         try {
             result = joinPoint.proceed();
         } catch (Throwable e) {
-            log.error("消息推送失败，【MessageStrategy】注解标注方法异常", e);
+            log.error("消息推送失败，【MessageStrategy】注解标注方法异常");
+            throw e;
         }
         return result;
     }
