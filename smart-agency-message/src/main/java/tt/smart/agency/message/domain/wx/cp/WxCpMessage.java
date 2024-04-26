@@ -27,9 +27,9 @@ public class WxCpMessage extends WxCpBaseMessage {
      */
     private String content;
 
-    // ======================================== 图片信息 ========================================
+    // ======================================== 媒体文件信息 ========================================
     /**
-     * 图片媒体文件 ID，可以调用上传临时素材接口获取
+     * 媒体文件 ID，可以调用上传临时素材接口获取
      */
     private String mediaId;
 
@@ -172,7 +172,9 @@ public class WxCpMessage extends WxCpBaseMessage {
                 break;
             }
             case FILE: {
-                System.out.print("待做：推送文件（PC专用）");
+                JSONObject file = new JSONObject();
+                file.put("media_id", this.getMediaId());
+                messageJson.put("file", file);
                 break;
             }
             case VOICE: {
