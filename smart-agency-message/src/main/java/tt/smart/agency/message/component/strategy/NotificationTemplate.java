@@ -23,25 +23,43 @@ public class NotificationTemplate {
     /**
      * 消息推送平台
      */
-    Set<MessagePushPlatformEnum> platformSet;
+    Set<MessagePushPlatformEnum> platformSet = new HashSet<>();
     /**
      * 消息列表
      */
     List<Message> messagesList = new ArrayList<>();
 
     /**
-     * 设置消息推送平台
+     * 设置消息推送平台。<br>
+     * 注意：该设置不会清除原始配置
      *
      * @param platform 推送平台
      */
     public void setPlatform(String platform) {
+        setPlatform(platform, false);
+    }
+
+    /**
+     * 设置消息推送平台
+     *
+     * @param platform              推送平台
+     * @param isClearOriginalConfig 是否清除原始配置
+     */
+    public void setPlatform(String platform, boolean isClearOriginalConfig) {
         if (StrUtil.isNotEmpty(platform)) {
             String[] platforms = platform.split(",");
-            Set<MessagePushPlatformEnum> strategyEnums = new HashSet<>(platforms.length);
+            Set<MessagePushPlatformEnum> strategyEnums = new HashSet<>();
             for (String platformCode : platforms) {
-                strategyEnums.add(MessagePushPlatformEnum.getPlatformEnum(platformCode));
+                MessagePushPlatformEnum platformEnum = MessagePushPlatformEnum.getPlatformEnum(platformCode);
+                if (platformEnum != null) {
+                    strategyEnums.add(platformEnum);
+                }
             }
-            this.platformSet = strategyEnums;
+            if (isClearOriginalConfig) {
+                this.platformSet = strategyEnums;
+            } else {
+                this.platformSet.addAll(strategyEnums);
+            }
         }
     }
 
@@ -69,7 +87,7 @@ public class NotificationTemplate {
      * @return 消息是否具备推送条件
      */
     public boolean checkIntegrity() {
-        if (this.messagesList == null || this.messagesList.isEmpty()) {
+        if (this.messagesList.isEmpty() && this.platformSet.isEmpty()) {
             return false;
         }
         return this.messagesList.stream().allMatch(e -> ObjUtil.isNotEmpty(e.getContent()));

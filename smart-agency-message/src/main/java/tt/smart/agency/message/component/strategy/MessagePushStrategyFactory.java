@@ -139,8 +139,8 @@ public class MessagePushStrategyFactory {
             notification = notificationStrategy.sendNotification(notificationTemplate, parameterContext);
             if (notification != null) {
                 if (!notification.checkIntegrity()) {
-                    log.error("消息策略[{}]推送消息失败：消息重要内容缺失（如：消息正文等）", strategyName);
-                    throw new RuntimeException("消息重要内容缺失（如：消息正文等）");
+                    log.error("消息策略[{}]推送消息失败：消息重要内容缺失（如：推送平台、消息正文等）", strategyName);
+                    throw new RuntimeException("消息重要内容缺失（如：推送平台、消息正文等）");
                 }
             }
         } catch (Exception e) {
