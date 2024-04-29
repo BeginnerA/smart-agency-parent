@@ -30,13 +30,21 @@ public class NotificationTemplate {
     List<Message> messagesList = new ArrayList<>();
 
     /**
-     * 设置消息推送平台。<br>
-     * 注意：该设置不会清除原始配置
+     * 添加消息推送平台
      *
      * @param platform 推送平台
      */
-    public void setPlatform(String platform) {
-        setPlatform(platform, false);
+    public void addPlatform(String platform) {
+        addPlatform(platform, false);
+    }
+
+    /**
+     * 设置消息推送平台
+     *
+     * @param platformSet 推送平台
+     */
+    public void setPlatform(Set<MessagePushPlatformEnum> platformSet) {
+        this.platformSet = platformSet;
     }
 
     /**
@@ -45,7 +53,7 @@ public class NotificationTemplate {
      * @param platform              推送平台
      * @param isClearOriginalConfig 是否清除原始配置
      */
-    public void setPlatform(String platform, boolean isClearOriginalConfig) {
+    public void addPlatform(String platform, boolean isClearOriginalConfig) {
         if (StrUtil.isNotEmpty(platform)) {
             String[] platforms = platform.split(",");
             Set<MessagePushPlatformEnum> strategyEnums = new HashSet<>();
@@ -64,11 +72,11 @@ public class NotificationTemplate {
     }
 
     /**
-     * 设置推送消息
+     * 添加推送消息
      *
      * @param message 消息
      */
-    public void setMessages(Message message) {
+    public void addMessages(Message message) {
         this.messagesList.add(message);
     }
 

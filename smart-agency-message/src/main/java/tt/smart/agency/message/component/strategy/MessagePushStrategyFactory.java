@@ -158,11 +158,11 @@ public class MessagePushStrategyFactory {
      */
     private NotificationTemplate getNotificationTemplate(MessageTemplateConfig messageTemplateConfig) {
         NotificationTemplate notificationTemplate = new NotificationTemplate();
-        notificationTemplate.setPlatform(messageTemplateConfig.getPlatform());
+        notificationTemplate.addPlatform(messageTemplateConfig.getPlatform());
         Message message = Message.builder().build();
         message.setContent(messageTemplateConfig.getContent());
         message.setAddressee(messageTemplateConfig.getRecipients());
-        notificationTemplate.setMessages(message);
+        notificationTemplate.addMessages(message);
         return notificationTemplate;
     }
 

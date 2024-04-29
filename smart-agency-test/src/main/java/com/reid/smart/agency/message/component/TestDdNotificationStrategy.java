@@ -24,7 +24,7 @@ public class TestDdNotificationStrategy extends AbstractNotificationStrategy {
                 .useridList("manager1374")
                 .content("你的快递已到，请携带工卡前往邮件中心领取。出发前可查看<a href=\"https://oa.dingtalk.com\">邮件中心视频实况</a>，聪明避开排队。")
                 .build();
-        notificationTemplate.setMessages(Message.builder().content(textMsg.toJson()).build());
+        notificationTemplate.addMessages(Message.builder().content(textMsg.toJson()).build());
         return notificationTemplate;
     }
 }
