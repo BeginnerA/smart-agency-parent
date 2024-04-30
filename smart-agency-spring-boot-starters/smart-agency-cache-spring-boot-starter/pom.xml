@@ -5,23 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>tt.smart.agency</groupId>
-        <artifactId>smart-agency-parent</artifactId>
+        <artifactId>smart-agency-spring-boot-starters</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <packaging>jar</packaging>
-
-    <artifactId>smart-agency-cache</artifactId>
-    <name>${project.artifactId}</name>
-    <description>缓存</description>
+    <artifactId>smart-agency-cache-spring-boot-starter</artifactId>
+    <name>smart-agency-cache - Spring Boot Starter</name>
+    <description>缓存策略 Spring Boot Starter</description>
 
     <properties>
 
     </properties>
 
     <dependencies>
-        <!-- smart-agency -->
         <dependency>
             <groupId>tt.smart.agency</groupId>
             <artifactId>smart-agency-cache</artifactId>
@@ -30,12 +27,19 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-json</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>tt.smart.agency</groupId>
-            <artifactId>smart-agency-tools</artifactId>
-            <version>${revision}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

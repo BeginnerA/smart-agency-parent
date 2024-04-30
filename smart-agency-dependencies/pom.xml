@@ -18,7 +18,7 @@
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
 
-        <springboot.version>3.2.3</springboot.version>
+        <spring.boot.version>3.2.5</spring.boot.version>
         <lombok.version>1.18.30</lombok.version>
         <aspectj.version>1.9.22</aspectj.version>
         <hutool.version>5.8.26</hutool.version>
@@ -32,43 +32,43 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
-                <version>${springboot.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!-- spring-boot-starter -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>${springboot.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!-- spring-boot-autoconfigure -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-autoconfigure</artifactId>
-                <version>${springboot.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!-- spring-boot-configuration-processor -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-configuration-processor</artifactId>
-                <version>${springboot.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!-- spring-boot-starter-aop -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-aop</artifactId>
-                <version>${springboot.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!-- spring-boot-starter-json -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-json</artifactId>
-                <version>${springboot.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!-- spring-boot-starter-data-redis -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>${springboot.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!-- lombok -->
             <dependency>

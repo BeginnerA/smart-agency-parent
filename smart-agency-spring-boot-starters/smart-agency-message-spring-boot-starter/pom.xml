@@ -5,16 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>tt.smart.agency</groupId>
-        <artifactId>smart-agency-parent</artifactId>
+        <artifactId>smart-agency-spring-boot-starters</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <packaging>jar</packaging>
-
-    <artifactId>smart-agency-message</artifactId>
-    <name>${project.artifactId}</name>
-    <description>消息</description>
+    <artifactId>smart-agency-message-spring-boot-starter</artifactId>
+    <name>smart-agency-message - Spring Boot Starter</name>
+    <description>消息推送 Spring Boot Starter</description>
 
     <properties>
 
@@ -22,25 +20,27 @@
 
     <dependencies>
         <dependency>
+            <groupId>tt.smart.agency</groupId>
+            <artifactId>smart-agency-message</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>tt.smart.agency</groupId>
-            <artifactId>smart-agency-tools</artifactId>
-            <version>${revision}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>tt.smart.agency</groupId>
-            <artifactId>smart-agency-cache</artifactId>
-            <version>${revision}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

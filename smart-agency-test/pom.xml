@@ -27,40 +27,23 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <version>3.2.3</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
 
-        <!-- 工具 -->
+        <!-- smart-agency -->
         <dependency>
             <groupId>tt.smart.agency</groupId>
             <artifactId>smart-agency-tools</artifactId>
             <version>${revision}</version>
         </dependency>
-        <!-- 缓存策略 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-json</artifactId>
-        </dependency>
-        <!-- smart-agency -->
+
         <dependency>
             <groupId>tt.smart.agency</groupId>
-            <artifactId>smart-agency-cache</artifactId>
-            <version>${revision}</version>
+            <artifactId>smart-agency-cache-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>tt.smart.agency</groupId>
-            <artifactId>smart-agency-message</artifactId>
-            <version>${revision}</version>
+            <artifactId>smart-agency-message-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
