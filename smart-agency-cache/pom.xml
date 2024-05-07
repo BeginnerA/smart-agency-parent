@@ -34,7 +34,7 @@
         </dependency>
         <dependency>
             <groupId>tt.smart.agency</groupId>
-            <artifactId>smart-agency-tools</artifactId>
+            <artifactId>smart-agency-support</artifactId>
             <version>${revision}</version>
             <scope>provided</scope>
         </dependency>

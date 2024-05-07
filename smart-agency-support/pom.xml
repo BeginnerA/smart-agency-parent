@@ -12,9 +12,9 @@
 
     <packaging>jar</packaging>
 
-    <artifactId>smart-agency-tools</artifactId>
+    <artifactId>smart-agency-support</artifactId>
     <name>${project.artifactId}</name>
-    <description>工具类</description>
+    <description>组件工具</description>
 
     <properties>
 
@@ -30,6 +30,12 @@
             <groupId>com.alibaba.fastjson2</groupId>
             <artifactId>fastjson2</artifactId>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

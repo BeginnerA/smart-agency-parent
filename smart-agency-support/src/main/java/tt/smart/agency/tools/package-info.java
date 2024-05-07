@@ -1,12 +1,9 @@
-package tt.smart.agency.tools;
-
 /**
  * <p>
- *
+ * 工具
  * </p>
  *
  * @author YangMC
  * @version V1.0
  **/
-public class Test {
-}
+package tt.smart.agency.tools;

@@ -1,4 +1,4 @@
-package tt.smart.agency.tools.spring.autoconfigure.condition;
+package tt.smart.agency.component.spring.autoconfigure;
 
 import org.springframework.context.annotation.Conditional;
 

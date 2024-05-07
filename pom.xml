@@ -55,7 +55,7 @@
         <module>smart-agency-mq</module>
         <module>smart-agency-netty</module>
         <module>smart-agency-message</module>
-        <module>smart-agency-tools</module>
+        <module>smart-agency-support</module>
         <module>smart-agency-spring-boot-starters</module>
     </modules>
 
