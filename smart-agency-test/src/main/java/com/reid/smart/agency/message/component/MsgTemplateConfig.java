@@ -39,7 +39,7 @@ public class MsgTemplateConfig {
                 messageTemplateConfigs.add(config);
             } else if ("TestSmsNotificationStrategy".equals(notificationStrategyClassName)) {
                 MessageTemplateConfig config = MessageTemplateConfig.builder()
-                        .content("内容").recipients("18287959467").platform("ALIBABA")
+                        .content("内容").recipients("182xxxxxxxx").platform("ALIBABA")
                         .thirdTemplateId("SMS_462270594")
                         .build();
                 messageTemplateConfigs.add(config);
