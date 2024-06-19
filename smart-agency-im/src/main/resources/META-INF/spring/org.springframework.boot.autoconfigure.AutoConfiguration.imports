@@ -1,0 +1,3 @@
+tt.smart.agency.im.config.AutoConfiguration
+tt.smart.agency.im.processor.ImBeanDefinitionRegistryPostProcessor
+tt.smart.agency.im.context.ImContextAware

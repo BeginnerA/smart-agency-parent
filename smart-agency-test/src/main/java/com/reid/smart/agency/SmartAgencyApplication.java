@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * <p>
- *
+ * SpringBoot 启动类
  * </p>
  *
  * @author YangMC

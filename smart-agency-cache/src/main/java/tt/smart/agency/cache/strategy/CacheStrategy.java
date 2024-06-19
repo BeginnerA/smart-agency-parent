@@ -27,7 +27,7 @@ public interface CacheStrategy<K, V> extends Serializable {
      *
      * @param key     键
      * @param value   缓存的对象
-     * @param timeout 失效时长，单位毫秒
+     * @param timeout 失效时长（秒）
      */
     void put(K key, V value, long timeout);
 
