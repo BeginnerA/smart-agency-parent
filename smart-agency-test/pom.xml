@@ -43,6 +43,16 @@
             <version>${revision}</version>
         </dependency>
 
+        <!-- poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>tt.smart.agency</groupId>
             <artifactId>smart-agency-cache-spring-boot-starter</artifactId>
