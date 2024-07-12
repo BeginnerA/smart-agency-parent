@@ -4,11 +4,12 @@ import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Conditional;
-import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
-import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
+import tt.smart.agency.im.handler.SpringWebSocketImClientHandler;
 
 /**
  * <p>
@@ -18,9 +19,9 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
  * @author YangMC
  * @version V1.0
  **/
-@EnableWebSocketMessageBroker
+@EnableWebSocket
 @Conditional(ImSpringEnableWebSocketMessageBroker.SpringWebSocketBeanCondition.class)
-@ConditionalOnMissingBean(type = {"webSocketScopeConfigurer", "stompWebSocketHandlerMapping"})
+@ConditionalOnMissingBean(type = {"webSocketHandlerMapping", "stompWebSocketHandlerMapping"})
 public class ImSpringEnableWebSocketMessageBroker {
 
     /**
@@ -50,13 +51,13 @@ public class ImSpringEnableWebSocketMessageBroker {
 
     }
 
-    /**
-     * spring WebSocket 配置
-     */
-    public static class ImSpringWebSocketMessageBrokerConfigurer implements WebSocketMessageBrokerConfigurer {
+    public static class ImSpringWebSocketConfigurer implements WebSocketConfigurer {
+
         @Override
-        public void registerStompEndpoints(StompEndpointRegistry registry) {
-            registry.addEndpoint("/agency-im").setAllowedOriginPatterns("*");
+        public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+            // 注册自定义 WebSocket 处理器到指定路径上
+            registry.addHandler(new SpringWebSocketImClientHandler(), "/agency-im").setAllowedOriginPatterns("*");
         }
     }
+
 }

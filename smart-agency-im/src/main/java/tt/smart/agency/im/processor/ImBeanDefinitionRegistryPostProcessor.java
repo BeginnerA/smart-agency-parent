@@ -21,13 +21,13 @@ public class ImBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegi
 
     @Override
     public void postProcessBeanDefinitionRegistry(@NotNull BeanDefinitionRegistry registry) throws BeansException {
-        boolean haveWebSocketScopeConfigurer = registry.containsBeanDefinition("webSocketScopeConfigurer");
+        boolean webSocketHandlerMapping = registry.containsBeanDefinition("webSocketHandlerMapping");
         boolean haveStompWebSocketHandlerMapping = registry.containsBeanDefinition("stompWebSocketHandlerMapping");
-        if (haveWebSocketScopeConfigurer && haveStompWebSocketHandlerMapping) {
-            // 注册 spring WebSocket
-            BeanDefinition imWebSocketMessageBrokerConfigurerBean = BeanDefinitionBuilder
-                    .rootBeanDefinition(ImSpringEnableWebSocketMessageBroker.ImSpringWebSocketMessageBrokerConfigurer.class).getBeanDefinition();
-            registry.registerBeanDefinition("imSpringWebSocketMessageBrokerConfigurer", imWebSocketMessageBrokerConfigurerBean);
+        if (webSocketHandlerMapping || haveStompWebSocketHandlerMapping) {
+            // 注册 Spring WebSocket
+            BeanDefinition imSpringWebSocketConfigurer = BeanDefinitionBuilder
+                    .rootBeanDefinition(ImSpringEnableWebSocketMessageBroker.ImSpringWebSocketConfigurer.class).getBeanDefinition();
+            registry.registerBeanDefinition("imSpringWebSocketConfigurer", imSpringWebSocketConfigurer);
         }
 
     }

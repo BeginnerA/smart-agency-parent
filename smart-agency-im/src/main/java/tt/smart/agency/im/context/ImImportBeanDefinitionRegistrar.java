@@ -8,7 +8,7 @@ import org.springframework.core.type.AnnotationMetadata;
 
 /**
  * <p>
- *
+ * 即时通讯导入 bean 定义注册器
  * </p>
  *
  * @author YangMC
@@ -20,15 +20,13 @@ public class ImImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegi
     public void registerBeanDefinitions(@NotNull AnnotationMetadata importingClassMetadata,
                                         @NotNull BeanDefinitionRegistry registry,
                                         @NotNull BeanNameGenerator importBeanNameGenerator) {
+        System.out.println("ImImportBeanDefinitionRegistrar");
         this.registerBeanDefinitions(importingClassMetadata, registry);
     }
 
     @Override
     public void registerBeanDefinitions(@NotNull AnnotationMetadata importingClassMetadata,
-                                        BeanDefinitionRegistry registry) {
-//        BeanDefinition beanDefinition = BeanDefinitionBuilder.rootBeanDefinition(SpringWebSocketImConfig.class)
-//                .getBeanDefinition();
-//        registry.registerBeanDefinition("springWebSocketImConfig", beanDefinition);
+                                        @NotNull BeanDefinitionRegistry registry) {
         ImportBeanDefinitionRegistrar.super.registerBeanDefinitions(importingClassMetadata, registry);
     }
 }
