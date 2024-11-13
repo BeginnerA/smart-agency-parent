@@ -16,37 +16,37 @@ public class SpringWebSocketImClientHandler extends AbstractWebSocketHandler {
 
     @Override
     public void afterConnectionEstablished(@NotNull WebSocketSession session) throws Exception {
-        System.out.print("afterConnectionEstablished=====================\n");
+        System.out.println("afterConnectionEstablished=====================");
         super.afterConnectionEstablished(session);
     }
 
     @Override
     public void handleTextMessage(@NotNull WebSocketSession session, @NotNull TextMessage message) throws Exception {
-        System.out.print("handleTextMessage=====================\n");
+        System.out.println("handleTextMessage=====================");
         super.handleTextMessage(session, message);
     }
 
     @Override
     public void handleBinaryMessage(@NotNull WebSocketSession session, @NotNull BinaryMessage message) throws Exception {
-        System.out.print("handleBinaryMessage=====================\n");
+        System.out.println("handleBinaryMessage=====================");
         super.handleBinaryMessage(session, message);
     }
 
     @Override
     public void handlePongMessage(@NotNull WebSocketSession session, @NotNull PongMessage message) throws Exception {
-        System.out.print("handlePongMessage=====================\n");
+        System.out.println("handlePongMessage=====================");
         super.handlePongMessage(session, message);
     }
 
     @Override
     public void handleTransportError(@NotNull WebSocketSession session, @NotNull Throwable exception) throws Exception {
-        System.out.print("handleTransportError=====================\n");
+        System.out.println("handleTransportError=====================");
         super.handleTransportError(session, exception);
     }
 
     @Override
     public void afterConnectionClosed(@NotNull WebSocketSession session, @NotNull CloseStatus status) throws Exception {
-        System.out.print("afterConnectionClosed=====================\n");
+        System.out.println("afterConnectionClosed=====================");
         super.afterConnectionClosed(session, status);
     }
 

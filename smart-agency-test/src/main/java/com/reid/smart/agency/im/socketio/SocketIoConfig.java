@@ -24,6 +24,7 @@ public class SocketIoConfig extends SocketIoProperties implements InitializingBe
         socketConfig.setSoLinger(0);
 
         com.corundumstudio.socketio.Configuration configuration = new com.corundumstudio.socketio.Configuration();
+//        configuration.setContext("/agency/socket.io");
         configuration.setSocketConfig(socketConfig);
         // host 在本地测试可以设置为 localhost 或者本机 IP，在 Linux 服务器跑可换成服务器IP
         configuration.setHostname(hostName);

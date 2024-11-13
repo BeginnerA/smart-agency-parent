@@ -16,55 +16,55 @@ public class NettySocketIOImClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRegistered(@NotNull ChannelHandlerContext ctx) throws Exception {
-        System.out.print("channelRegistered=====================\n");
+        System.out.println("channelRegistered=====================");
         ctx.fireChannelRegistered();
     }
 
     @Override
     public void channelUnregistered(@NotNull ChannelHandlerContext ctx) throws Exception {
-        System.out.print("channelUnregistered=====================\n");
+        System.out.println("channelUnregistered=====================");
         ctx.fireChannelUnregistered();
     }
 
     @Override
     public void channelActive(@NotNull ChannelHandlerContext ctx) throws Exception {
-        System.out.print("channelActive=====================\n");
+        System.out.println("channelActive=====================");
         ctx.fireChannelActive();
     }
 
     @Override
     public void channelInactive(@NotNull ChannelHandlerContext ctx) throws Exception {
-        System.out.print("channelInactive=====================\n");
+        System.out.println("channelInactive=====================");
         ctx.fireChannelInactive();
     }
 
     @Override
     public void channelRead(@NotNull ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.print("channelRead=====================\n");
+        System.out.println("channelRead=====================");
         ctx.fireChannelRead(msg);
     }
 
     @Override
     public void channelReadComplete(@NotNull ChannelHandlerContext ctx) throws Exception {
-        System.out.print("channelReadComplete=====================\n");
+        System.out.println("channelReadComplete=====================");
         ctx.fireChannelReadComplete();
     }
 
     @Override
     public void userEventTriggered(@NotNull ChannelHandlerContext ctx, Object evt) throws Exception {
-        System.out.print("userEventTriggered=====================\n");
+        System.out.println("userEventTriggered=====================");
         ctx.fireUserEventTriggered(evt);
     }
 
     @Override
     public void channelWritabilityChanged(@NotNull ChannelHandlerContext ctx) throws Exception {
-        System.out.print("channelWritabilityChanged=====================\n");
+        System.out.println("channelWritabilityChanged=====================");
         ctx.fireChannelWritabilityChanged();
     }
 
     @Override
     public void exceptionCaught(@NotNull ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        System.out.print("exceptionCaught=====================\n");
+        System.out.println("exceptionCaught=====================");
         ctx.fireExceptionCaught(cause);
     }
 

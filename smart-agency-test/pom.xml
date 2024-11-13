@@ -36,6 +36,12 @@
             <version>3.2.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.mobicents.external.freetts</groupId>
+            <artifactId>freetts</artifactId>
+            <version>1.0</version>
+        </dependency>
+
         <!-- smart-agency -->
         <dependency>
             <groupId>tt.smart.agency</groupId>
@@ -123,4 +129,34 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <!-- 环境标识，需要与配置文件的名称相对应 -->
+                <profiles.active>local</profiles.active>
+                <logging.level>info</logging.level>
+            </properties>
+            <activation>
+                <!-- 默认环境 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <!-- 环境标识，需要与配置文件的名称相对应 -->
+                <profiles.active>dev</profiles.active>
+                <logging.level>info</logging.level>
+            </properties>
+        </profile>
+        <profile>
+            <id>preview</id>
+            <properties>
+                <profiles.active>preview</profiles.active>
+                <logging.level>warn</logging.level>
+            </properties>
+        </profile>
+    </profiles>
 </project>
