@@ -16,10 +16,6 @@
     <name>${project.artifactId}</name>
     <description>组件工具</description>
 
-    <properties>
-
-    </properties>
-
     <dependencies>
         <!-- 工具 -->
         <dependency>
