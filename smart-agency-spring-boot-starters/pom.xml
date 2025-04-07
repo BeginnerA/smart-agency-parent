@@ -14,13 +14,10 @@
     <name>smart-agency - Spring Boot Starters</name>
     <description>smart-agency 各个模块的 Spring Boot Starter</description>
 
-    <properties>
-
-    </properties>
-
     <modules>
         <module>smart-agency-cache-spring-boot-starter</module>
         <module>smart-agency-message-spring-boot-starter</module>
+        <module>smart-agency-db-spring-boot-starter</module>
     </modules>
 
 </project>

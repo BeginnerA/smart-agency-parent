@@ -16,10 +16,6 @@
     <name>${project.artifactId}</name>
     <description>消息</description>
 
-    <properties>
-
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -16,10 +16,6 @@
     <name>${project.artifactId}</name>
     <description>缓存</description>
 
-    <properties>
-
-    </properties>
-
     <dependencies>
         <!-- smart-agency -->
         <dependency>

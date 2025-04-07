@@ -14,10 +14,6 @@
     <name>smart-agency-message - Spring Boot Starter</name>
     <description>消息推送 Spring Boot Starter</description>
 
-    <properties>
-
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>tt.smart.agency</groupId>

@@ -21,11 +21,12 @@
         <spring.boot.version>3.3.5</spring.boot.version>
         <lombok.version>1.18.34</lombok.version>
         <aspectj.version>1.9.22</aspectj.version>
-        <hutool.version>5.8.33</hutool.version>
+        <hutool.version>5.8.32</hutool.version>
         <fastjson2.version>2.0.53</fastjson2.version>
         <annotations.version>26.0.1</annotations.version>
         <socketio.version>2.0.12</socketio.version>
         <poi.version>5.3.0</poi.version>
+        <mybatis-plus.version>3.5.9</mybatis-plus.version>
     </properties>
 
     <dependencyManagement>
@@ -77,6 +78,19 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-websocket</artifactId>
                 <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- spring-boot-starter-data-jdbc -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jdbc</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- mybatis-plus-core -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-core</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
             <!-- socket-io -->

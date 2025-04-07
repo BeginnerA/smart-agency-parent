@@ -69,6 +69,11 @@
             <artifactId>smart-agency-message-spring-boot-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>tt.smart.agency</groupId>
+            <artifactId>smart-agency-db-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
         <dependency>
             <groupId>tt.smart.agency</groupId>

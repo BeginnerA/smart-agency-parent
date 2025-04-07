@@ -14,10 +14,6 @@
     <name>smart-agency-cache - Spring Boot Starter</name>
     <description>缓存策略 Spring Boot Starter</description>
 
-    <properties>
-
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>tt.smart.agency</groupId>

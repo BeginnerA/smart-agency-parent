@@ -16,8 +16,4 @@
     <name>${project.artifactId}</name>
     <description>消息队列</description>
 
-    <properties>
-
-    </properties>
-
 </project>

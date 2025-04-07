@@ -51,11 +51,12 @@
     <!-- 所有模块 -->
     <modules>
         <module>smart-agency-dependencies</module>
-        <module>smart-agency-cache</module>
-        <module>smart-agency-mq</module>
-        <module>smart-agency-im</module>
-        <module>smart-agency-message</module>
         <module>smart-agency-support</module>
+        <module>smart-agency-cache</module>
+        <module>smart-agency-db</module>
+        <module>smart-agency-message</module>
+        <module>smart-agency-im</module>
+        <module>smart-agency-mq</module>
         <module>smart-agency-spring-boot-starters</module>
     </modules>
 
