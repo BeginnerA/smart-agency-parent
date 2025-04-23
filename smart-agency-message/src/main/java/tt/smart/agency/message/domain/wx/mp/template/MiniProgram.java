@@ -12,7 +12,7 @@ import java.io.Serializable;
  *  小程序
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

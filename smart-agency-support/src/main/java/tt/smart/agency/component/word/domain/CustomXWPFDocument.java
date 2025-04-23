@@ -22,7 +22,7 @@ import java.io.InputStream;
  * 自定义 XWPFDocument, 修复图片插入失败问题问题
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Log4j2

@@ -11,7 +11,7 @@ import lombok.experimental.SuperBuilder;
  * 腾讯云短信服务配置属性
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

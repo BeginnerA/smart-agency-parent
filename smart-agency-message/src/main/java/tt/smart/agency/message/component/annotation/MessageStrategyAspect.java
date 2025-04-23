@@ -18,7 +18,7 @@ import java.util.Map;
  * 消息通知策略 AOP
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Slf4j

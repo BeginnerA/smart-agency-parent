@@ -21,7 +21,7 @@ import static tt.smart.agency.component.word.tools.PoiElTools.EMPTY;
  * 满足模板的 EL 表达式支持
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SuppressWarnings("rawtypes")

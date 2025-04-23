@@ -11,7 +11,7 @@ import tt.smart.agency.message.factory.InitConfigFactory;
  *
  * @param <S> 短信服务
  * @param <C> 短信配置
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface BaseSmsPlatformFactory<S extends SmsMessageBlend, C extends SupplierConfig> extends InitConfigFactory<C> {

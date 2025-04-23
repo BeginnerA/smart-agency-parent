@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 微信基本消息
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class WxBaseMessage implements Serializable {

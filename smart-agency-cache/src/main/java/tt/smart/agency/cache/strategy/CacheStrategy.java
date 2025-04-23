@@ -9,7 +9,7 @@ import java.io.Serializable;
  *
  * @param <K> 键类型
  * @param <V> 值类型
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface CacheStrategy<K, V> extends Serializable {

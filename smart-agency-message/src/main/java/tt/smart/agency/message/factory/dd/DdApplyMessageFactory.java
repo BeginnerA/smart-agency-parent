@@ -9,7 +9,7 @@ import tt.smart.agency.message.service.dd.DdApplyMessageImpl;
  * 钉钉应用消息工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DdApplyMessageFactory implements BaseDdPlatformFactory<DdApplyMessage, DdProperties> {

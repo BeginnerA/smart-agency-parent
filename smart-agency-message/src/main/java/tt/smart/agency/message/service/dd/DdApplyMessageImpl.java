@@ -13,7 +13,7 @@ import tt.smart.agency.message.enums.dd.DdApiUrl;
  * 钉钉消息推送服务实现
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DdApplyMessageImpl extends AbstractDdMessage<DdMessageSendResult> implements DdApplyMessage {

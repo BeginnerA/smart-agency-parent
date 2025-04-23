@@ -7,7 +7,7 @@ import lombok.Data;
  * 图片设置和图片信息
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

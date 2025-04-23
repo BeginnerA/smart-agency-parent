@@ -10,7 +10,7 @@ import tt.smart.agency.im.command.WebSocketCommand;
  * 消息工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class MessageFactory {

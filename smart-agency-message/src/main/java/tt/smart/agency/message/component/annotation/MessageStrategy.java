@@ -12,7 +12,7 @@ import java.lang.annotation.*;
  * 根据定义消息策略进行消息推送
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Documented

@@ -11,7 +11,7 @@ import java.util.Stack;
  * 模板 for each 的参数
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

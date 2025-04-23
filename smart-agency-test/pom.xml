@@ -77,7 +77,7 @@
 
         <dependency>
             <groupId>tt.smart.agency</groupId>
-            <artifactId>smart-agency-im</artifactId>
+            <artifactId>smart-agency-im-spring-boot-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

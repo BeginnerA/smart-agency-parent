@@ -9,7 +9,7 @@ import tt.smart.agency.message.domain.MessageSendResult;
  * 消息日志接口
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface MessageLogListener {

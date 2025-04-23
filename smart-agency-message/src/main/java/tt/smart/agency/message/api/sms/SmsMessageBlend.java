@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
  * 通用短信服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface SmsMessageBlend {

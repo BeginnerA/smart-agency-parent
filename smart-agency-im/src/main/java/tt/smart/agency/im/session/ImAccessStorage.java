@@ -5,7 +5,7 @@ package tt.smart.agency.im.session;
  * 即时通讯会话访问存储
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface ImAccessStorage {

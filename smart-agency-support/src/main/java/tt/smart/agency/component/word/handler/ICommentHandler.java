@@ -5,7 +5,7 @@ package tt.smart.agency.component.word.handler;
  * 批注接口
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface ICommentHandler {

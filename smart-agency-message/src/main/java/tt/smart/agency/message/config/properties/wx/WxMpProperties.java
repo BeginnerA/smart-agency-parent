@@ -9,7 +9,7 @@ import lombok.experimental.SuperBuilder;
  * 微信接入相关配置属性
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

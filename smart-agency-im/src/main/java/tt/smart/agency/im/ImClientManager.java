@@ -5,7 +5,7 @@ package tt.smart.agency.im;
  * 即时通讯客户端管理器
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class ImClientManager {

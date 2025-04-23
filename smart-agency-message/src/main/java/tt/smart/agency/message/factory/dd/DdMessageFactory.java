@@ -12,7 +12,7 @@ import tt.smart.agency.message.enums.dd.DdPlatformType;
  * 钉钉消息工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DdMessageFactory {

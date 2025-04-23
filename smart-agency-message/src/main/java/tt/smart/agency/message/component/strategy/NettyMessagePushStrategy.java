@@ -11,7 +11,7 @@ import tt.smart.agency.message.enums.PlatformType;
  * Netty 网络消息推送策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Service

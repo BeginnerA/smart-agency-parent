@@ -6,7 +6,7 @@ package tt.smart.agency.component.word.handler;
  * </p>
  *
  * @param <T>
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface IReadHandler<T> {

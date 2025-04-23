@@ -21,7 +21,7 @@ import static tt.smart.agency.component.word.tools.PoiElTools.*;
  * 解析07版的 Word，替换文字，生成表格，生成图片
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SuppressWarnings({"unchecked", "rawtypes"})

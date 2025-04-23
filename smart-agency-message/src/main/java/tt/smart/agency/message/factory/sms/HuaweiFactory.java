@@ -9,7 +9,7 @@ import tt.smart.agency.message.service.sms.HuaweiSmsImpl;
  * 华为云短信工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class HuaweiFactory implements BaseSmsPlatformFactory<HuaweiSms, HuaweiProperties> {

@@ -14,7 +14,7 @@ import tt.smart.agency.message.domain.dd.DdMessage;
  * 钉钉消息测试
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SpringBootTest

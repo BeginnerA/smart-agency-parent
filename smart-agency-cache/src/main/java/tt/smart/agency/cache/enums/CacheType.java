@@ -15,7 +15,7 @@ import java.util.Arrays;
  * 枚举顺序就是默认缓存策略启动顺序。
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Getter

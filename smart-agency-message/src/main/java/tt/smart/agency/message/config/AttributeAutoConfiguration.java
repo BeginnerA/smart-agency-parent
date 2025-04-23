@@ -18,7 +18,7 @@ import tt.smart.agency.message.factory.wx.WxMpMessageFactory;
  * 配置属性自动装配
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class AttributeAutoConfiguration {

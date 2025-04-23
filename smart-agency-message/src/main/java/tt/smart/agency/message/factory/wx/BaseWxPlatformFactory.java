@@ -9,7 +9,7 @@ import tt.smart.agency.message.factory.InitConfigFactory;
  * 基础微信平台工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SuppressWarnings(value = {"rawtypes"})

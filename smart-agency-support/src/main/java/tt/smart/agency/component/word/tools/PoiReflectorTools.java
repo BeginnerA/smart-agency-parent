@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 反射工具类, 缓存读取的 class 信息,省的一直获取
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

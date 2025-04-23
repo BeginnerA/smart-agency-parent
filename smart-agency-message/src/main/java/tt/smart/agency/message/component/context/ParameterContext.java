@@ -11,7 +11,7 @@ import tt.smart.agency.message.component.domain.MessageTemplateConfig;
  * 参数上下文
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Getter

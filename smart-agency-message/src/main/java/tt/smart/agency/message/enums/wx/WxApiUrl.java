@@ -8,7 +8,7 @@ import lombok.Getter;
  * 微信公众号接口 API 地址
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface WxApiUrl {

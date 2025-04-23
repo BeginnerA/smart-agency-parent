@@ -17,7 +17,7 @@ import java.util.*;
  * 解析实体类对象，复用注解
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Log4j2

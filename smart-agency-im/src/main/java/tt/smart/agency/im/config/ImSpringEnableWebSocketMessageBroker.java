@@ -16,7 +16,7 @@ import tt.smart.agency.im.handler.SpringWebSocketImClientHandler;
  * Spring WebSocket 启动配置
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @EnableWebSocket
@@ -29,7 +29,7 @@ public class ImSpringEnableWebSocketMessageBroker {
      * 判断是否需要注入 SpringWebSocket 的 Bean 条件
      * </p>
      *
-     * @author YangMC
+     * @author MC_Yang
      * @version V1.0
      **/
     static class SpringWebSocketBeanCondition extends AnyNestedCondition {

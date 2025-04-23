@@ -5,7 +5,7 @@ package tt.smart.agency.im.session;
  * 抽象的会话存储
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractImClientStorage implements ImAccessStorage, ImTopicStorage {

@@ -5,7 +5,7 @@ package tt.smart.agency.component.word.handler;
  * Excel 本身数据文件
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface IExcelDataModel {

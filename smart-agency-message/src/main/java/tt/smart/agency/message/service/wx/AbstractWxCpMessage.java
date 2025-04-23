@@ -11,7 +11,7 @@ import tt.smart.agency.message.service.AbstractMessageBlend;
  * 抽象的企业微信消息服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractWxCpMessage<R extends WxCpMessageSendResult> extends AbstractMessageBlend<R, WxCpProperties> {

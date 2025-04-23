@@ -22,7 +22,7 @@ import static tt.smart.agency.component.word.tools.PoiElTools.*;
  * 公共基础类
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SuppressWarnings("rawtypes")

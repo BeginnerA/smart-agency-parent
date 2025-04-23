@@ -22,7 +22,7 @@ import static tt.smart.agency.component.word.tools.PoiElTools.*;
  * 处理和生成 Map 类型的数据变成表格
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Log4j2

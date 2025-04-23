@@ -9,7 +9,7 @@ import tt.smart.agency.message.component.domain.MessageTemplateConfig;
  * 抽象的通知策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractNotificationStrategy implements NotificationStrategy {

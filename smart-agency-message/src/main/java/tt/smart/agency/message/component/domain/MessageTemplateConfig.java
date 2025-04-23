@@ -10,7 +10,7 @@ import tt.smart.agency.message.component.strategy.MessagePushPlatformEnum;
  * 消息模板配置
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

@@ -10,7 +10,7 @@ import lombok.experimental.SuperBuilder;
  * 内存缓存策略配置属性
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

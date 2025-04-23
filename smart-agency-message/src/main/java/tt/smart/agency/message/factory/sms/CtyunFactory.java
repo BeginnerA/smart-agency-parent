@@ -9,7 +9,7 @@ import tt.smart.agency.message.service.sms.CtyunSmsImpl;
  * 天翼云短信工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class CtyunFactory implements BaseSmsPlatformFactory<CtyunSms, CtyunProperties> {

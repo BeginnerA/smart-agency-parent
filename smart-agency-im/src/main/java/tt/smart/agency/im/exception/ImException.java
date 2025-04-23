@@ -5,7 +5,7 @@ package tt.smart.agency.im.exception;
  * 即时通讯异常
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class ImException extends RuntimeException {

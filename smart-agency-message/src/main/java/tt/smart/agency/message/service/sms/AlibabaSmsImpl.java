@@ -20,7 +20,7 @@ import java.util.*;
  * 阿里云短信服务实现
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class AlibabaSmsImpl extends AbstractSmsMessage<SmsResponseResult, AlibabaProperties> implements AlibabaSms {

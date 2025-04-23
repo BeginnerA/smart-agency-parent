@@ -5,7 +5,7 @@ package tt.smart.agency.message.component.strategy;
  * 抽象的消息推送策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractMessagePushStrategy implements MessagePushStrategy {

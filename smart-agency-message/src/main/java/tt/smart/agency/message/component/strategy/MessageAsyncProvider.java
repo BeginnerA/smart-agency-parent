@@ -15,7 +15,7 @@ import java.util.concurrent.Executor;
  * 异步信息推送提供程序
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Slf4j

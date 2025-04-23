@@ -16,7 +16,7 @@ import java.util.List;
  * 消息推送配置
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Configuration

@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * 消息注解组件测试
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SpringBootTest

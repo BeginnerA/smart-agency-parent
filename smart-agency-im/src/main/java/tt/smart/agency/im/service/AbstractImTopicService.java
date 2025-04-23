@@ -7,7 +7,7 @@ import java.util.Set;
  * 抽象的即时通讯主题
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractImTopicService implements ImTopicService {

@@ -24,7 +24,7 @@ import java.util.Map;
  * 网易云短信服务实现
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class NeteaseSmsImpl extends AbstractSmsMessage<SmsResponseResult, NeteaseProperties> implements NeteaseSms {

@@ -13,7 +13,7 @@ import tt.smart.agency.message.enums.wx.WxApiUrl;
  * 企业微信消息服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class WxCpApplyMessageImpl extends AbstractWxCpMessage<WxCpMessageSendResult> implements WxCpApplyMessage {

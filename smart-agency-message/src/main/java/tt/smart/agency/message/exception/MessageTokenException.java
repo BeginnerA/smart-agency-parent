@@ -5,7 +5,7 @@ package tt.smart.agency.message.exception;
  * 消息访问令牌异常
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class MessageTokenException extends MessageException {

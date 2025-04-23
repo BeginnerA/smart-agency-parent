@@ -10,7 +10,7 @@ import java.util.Map;
  * 数据处理默认实现
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class ExcelDataHandlerDefaultImpl<T> implements IExcelDataHandler<T> {

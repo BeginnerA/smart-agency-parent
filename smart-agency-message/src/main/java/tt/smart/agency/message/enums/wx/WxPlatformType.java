@@ -14,7 +14,7 @@ import tt.smart.agency.message.factory.wx.WxMpMessageFactory;
  * 微信平台类型
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Getter

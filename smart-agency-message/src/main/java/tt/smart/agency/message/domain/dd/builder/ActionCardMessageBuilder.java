@@ -9,7 +9,7 @@ import tt.smart.agency.message.enums.dd.DdMessageType;
  * <a href="https://developer.work.weixin.qq.com/document/path/90236">详情参考</a>
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class ActionCardMessageBuilder extends BaseMessageBuilder<ActionCardMessageBuilder> {

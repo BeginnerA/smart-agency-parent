@@ -14,7 +14,7 @@ import java.util.Set;
  * 短信消息推送策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Service

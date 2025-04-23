@@ -10,7 +10,7 @@ import java.util.List;
  * Excel导出实体，对 cell 类型做映射
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

@@ -9,7 +9,7 @@ import java.util.concurrent.locks.Lock;
  * 通用访问令牌（ACCESS_TOKEN）接口
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface AccessTokenBlend {

@@ -20,7 +20,7 @@ import java.util.List;
  * 微信公众号消息测试
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SpringBootTest

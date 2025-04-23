@@ -12,7 +12,7 @@
 // * WebSocket 实现方式四
 // * </p>
 // *
-// * @author YangMC
+// * @author MC_Yang
 // * @version V1.0
 // **/
 //public class WebSocketConfig4 implements ServerApplicationConfig {

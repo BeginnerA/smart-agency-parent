@@ -12,7 +12,7 @@ import tt.smart.agency.message.domain.wx.mp.template.WxMpTemplateMessage;
  * <a href="https://developers.weixin.qq.com/miniprogram/dev/OpenApiDoc/mp-message-management/uniform-message/sendUniformMessage.html">小程序消息详情参考</a>
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface WxMpMessage extends WxMessageBlend<WxMpMessageSendResult, WxMpBaseMessage> {

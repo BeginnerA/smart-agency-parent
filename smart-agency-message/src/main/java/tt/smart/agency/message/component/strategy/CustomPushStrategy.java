@@ -15,7 +15,7 @@ import tt.smart.agency.message.exception.MessageException;
  * 在内置消息推送策略不满足时，可以继承该类对消息推送策略自定义实现。
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Slf4j

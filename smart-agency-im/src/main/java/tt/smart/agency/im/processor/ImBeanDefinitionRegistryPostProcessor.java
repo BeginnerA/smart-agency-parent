@@ -14,7 +14,7 @@ import tt.smart.agency.im.config.ImSpringEnableWebSocketMessageBroker;
  * 即时通讯 bean 定义注册表后处理程序
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class ImBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor {

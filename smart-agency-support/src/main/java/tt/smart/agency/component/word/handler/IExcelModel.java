@@ -5,7 +5,7 @@ package tt.smart.agency.component.word.handler;
  * Excel 标记类
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface IExcelModel {

@@ -9,7 +9,7 @@ import tt.smart.agency.message.domain.wx.WxBaseMessage;
  * 微信公众号消息基础类
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

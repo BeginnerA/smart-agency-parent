@@ -11,7 +11,7 @@ import java.io.OutputStream;
  *
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class TextToSpeechExample {

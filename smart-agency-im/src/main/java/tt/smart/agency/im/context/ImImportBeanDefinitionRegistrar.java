@@ -11,7 +11,7 @@ import org.springframework.core.type.AnnotationMetadata;
  * 即时通讯导入 bean 定义注册器
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class ImImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar {

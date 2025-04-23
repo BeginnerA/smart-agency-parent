@@ -8,7 +8,7 @@ import tt.smart.agency.message.component.annotation.MessageStrategy;
  * 测试消息注解组件
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Component

@@ -5,7 +5,7 @@ package tt.smart.agency.component.word.handler;
  * 导入校验处理器
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface IExcelVerifyHandler<T> {

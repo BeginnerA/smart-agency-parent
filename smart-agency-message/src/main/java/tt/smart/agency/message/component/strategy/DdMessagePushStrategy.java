@@ -11,7 +11,7 @@ import tt.smart.agency.message.factory.dd.DdMessageFactory;
  * 钉钉消息推送策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DdMessagePushStrategy extends AbstractMessagePushStrategy {

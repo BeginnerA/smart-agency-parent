@@ -9,7 +9,7 @@ import java.util.Set;
  * 即时通讯主题服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface ImTopicService {

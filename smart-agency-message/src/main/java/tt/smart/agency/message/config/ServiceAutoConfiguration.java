@@ -22,7 +22,7 @@ import tt.smart.agency.message.factory.wx.WxMessageFactory;
  * 服务自动配置
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class ServiceAutoConfiguration {

@@ -11,7 +11,7 @@ import tt.smart.agency.message.factory.InitConfigFactory;
  * 基础钉钉平台工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface BaseDdPlatformFactory<S extends DdMessageBlend<DdMessageSendResult, DdMessage>, C extends DdConfig> extends InitConfigFactory<C> {

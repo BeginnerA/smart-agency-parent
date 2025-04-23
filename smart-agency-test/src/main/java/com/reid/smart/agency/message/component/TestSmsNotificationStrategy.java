@@ -9,7 +9,7 @@ import tt.smart.agency.message.component.strategy.NotificationTemplate;
  * 测试自定义短信通知策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class TestSmsNotificationStrategy extends AbstractNotificationStrategy {

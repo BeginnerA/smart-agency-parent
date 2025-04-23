@@ -5,7 +5,7 @@ package tt.smart.agency.message.storage;
  * 抽象的通用访问令牌（ACCESS_TOKEN）存储接口服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractAccessTokenStorageBlend implements AccessTokenStorageBlend {

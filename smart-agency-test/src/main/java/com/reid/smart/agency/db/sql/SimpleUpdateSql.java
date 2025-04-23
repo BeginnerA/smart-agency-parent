@@ -12,7 +12,7 @@ import java.util.Arrays;
  * 简单更新 SQL 测试
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class SimpleUpdateSql {

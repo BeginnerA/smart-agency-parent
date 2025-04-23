@@ -12,7 +12,7 @@ import tt.smart.agency.message.service.AbstractMessageBlend;
  * </p>
  *
  * @param <R> 消息推送返回结果对象
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractDdMessage<R extends DdMessageSendResult> extends AbstractMessageBlend<R, DdProperties> {

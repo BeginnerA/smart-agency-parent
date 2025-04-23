@@ -22,7 +22,7 @@ import java.util.*;
  * 腾讯云短信服务实现
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class TencentSmsImpl extends AbstractSmsMessage<SmsResponseResult, TencentProperties> implements TencentSms {

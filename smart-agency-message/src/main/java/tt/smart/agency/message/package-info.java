@@ -7,7 +7,7 @@
  * a) 让消息推送变得非常简单，只需要通过一个注解、配置就可以实现各大平台的消息推送；
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 package tt.smart.agency.message;

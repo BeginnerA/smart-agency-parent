@@ -7,7 +7,7 @@ import tt.smart.agency.im.domain.ImTopic;
  * 即时通讯主题存储
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface ImTopicStorage {

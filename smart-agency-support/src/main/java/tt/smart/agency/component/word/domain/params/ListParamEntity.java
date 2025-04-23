@@ -9,7 +9,7 @@ import java.io.Serializable;
  * Excel 对象导出结构
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

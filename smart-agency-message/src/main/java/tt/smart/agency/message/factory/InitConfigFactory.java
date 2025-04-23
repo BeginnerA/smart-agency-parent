@@ -8,7 +8,7 @@ import tt.smart.agency.message.config.properties.Config;
  * </p>
  *
  * @param <C> 配置
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface InitConfigFactory<C extends Config> {

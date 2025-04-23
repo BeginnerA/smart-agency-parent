@@ -5,7 +5,7 @@ package tt.smart.agency.message.exception;
  * 钉钉异常
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DdMessageException extends MessageException {

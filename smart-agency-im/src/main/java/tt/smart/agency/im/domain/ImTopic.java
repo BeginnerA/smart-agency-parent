@@ -8,7 +8,7 @@ import java.util.Set;
  * 即时通讯主题
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class ImTopic {

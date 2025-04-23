@@ -18,6 +18,7 @@
         <module>smart-agency-cache-spring-boot-starter</module>
         <module>smart-agency-message-spring-boot-starter</module>
         <module>smart-agency-db-spring-boot-starter</module>
+        <module>smart-agency-im-spring-boot-starter</module>
     </modules>
 
 </project>

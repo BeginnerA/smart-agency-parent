@@ -11,7 +11,7 @@ import java.util.Set;
  * 即时通讯消息
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

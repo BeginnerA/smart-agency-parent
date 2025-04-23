@@ -11,7 +11,7 @@ import tt.smart.agency.message.exception.SmsMessageException;
  * 基础短信配置
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

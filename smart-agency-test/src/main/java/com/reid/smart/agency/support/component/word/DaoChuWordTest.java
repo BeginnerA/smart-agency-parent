@@ -18,7 +18,7 @@ import java.util.*;
  * Word 模板导出测试
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DaoChuWordTest {

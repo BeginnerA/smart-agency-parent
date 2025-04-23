@@ -13,7 +13,7 @@ import java.io.Serializable;
  * 基础参数
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

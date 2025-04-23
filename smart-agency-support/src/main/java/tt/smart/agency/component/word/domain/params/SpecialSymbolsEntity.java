@@ -7,7 +7,7 @@ import lombok.Data;
  * 特殊符号
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

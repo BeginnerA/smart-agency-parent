@@ -7,7 +7,7 @@ import tt.smart.agency.im.client.ImClient;
  * SocketIO 命令
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class SocketIOCommand implements ImCommand {

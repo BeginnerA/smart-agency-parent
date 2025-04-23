@@ -14,7 +14,7 @@ import java.util.List;
  * 微信公众号模板消息数据
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

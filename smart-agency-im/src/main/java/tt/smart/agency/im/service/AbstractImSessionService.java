@@ -5,7 +5,7 @@ package tt.smart.agency.im.service;
  * 抽象的即时通讯会话
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractImSessionService implements ImSessionService {

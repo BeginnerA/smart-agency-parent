@@ -7,7 +7,7 @@ import tt.smart.agency.message.component.context.ParameterContext;
  * 默认通知策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DefaultNotificationStrategy extends AbstractNotificationStrategy {

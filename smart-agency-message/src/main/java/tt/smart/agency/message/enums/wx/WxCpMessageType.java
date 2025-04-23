@@ -8,7 +8,7 @@ import lombok.Getter;
  * 企业微信消息类型
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Getter

@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContextAware;
  * 即时通讯上下文感知
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class ImContextAware implements ApplicationContextAware {

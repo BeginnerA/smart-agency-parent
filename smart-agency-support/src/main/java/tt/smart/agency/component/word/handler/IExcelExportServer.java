@@ -7,7 +7,7 @@ import java.util.List;
  * 导出数据服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface IExcelExportServer {

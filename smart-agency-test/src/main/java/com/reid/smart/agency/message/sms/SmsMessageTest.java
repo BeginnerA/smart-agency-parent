@@ -15,7 +15,7 @@ import tt.smart.agency.message.factory.sms.SmsMessageFactory;
  * 短信消息测试
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SpringBootTest

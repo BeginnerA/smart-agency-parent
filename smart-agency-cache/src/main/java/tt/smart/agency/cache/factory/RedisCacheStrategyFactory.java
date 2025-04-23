@@ -9,7 +9,7 @@ import tt.smart.agency.cache.strategy.RedisCacheStrategy;
  * Redis 缓存策略工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SuppressWarnings(value = {"rawtypes"})

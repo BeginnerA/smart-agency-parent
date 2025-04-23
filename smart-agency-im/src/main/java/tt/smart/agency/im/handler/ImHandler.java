@@ -8,7 +8,7 @@ import tt.smart.agency.im.session.ImSession;
  * 即时通讯处理器
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface ImHandler {

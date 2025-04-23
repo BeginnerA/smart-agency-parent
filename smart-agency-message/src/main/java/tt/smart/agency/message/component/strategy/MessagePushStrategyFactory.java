@@ -23,7 +23,7 @@ import java.util.concurrent.CompletableFuture;
  * 消息推送服务工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Slf4j

@@ -7,7 +7,7 @@
  * c) 当进行远程管理时，应采取必要措施防止鉴别信息在网络传输过程中被窃听；<br>
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 package tt.smart.agency.component.securityprotect.login;

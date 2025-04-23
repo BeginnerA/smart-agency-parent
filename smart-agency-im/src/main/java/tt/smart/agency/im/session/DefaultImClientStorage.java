@@ -11,7 +11,7 @@ import tt.smart.agency.im.exception.ImException;
  * 默认的会话存储
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DefaultImClientStorage extends AbstractImClientStorage {

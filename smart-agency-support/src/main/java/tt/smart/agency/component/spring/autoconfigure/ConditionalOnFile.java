@@ -10,7 +10,7 @@ import java.lang.annotation.*;
  * 支持多文件目录扫描，如果文件不存在，跳过继续扫描。
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Documented

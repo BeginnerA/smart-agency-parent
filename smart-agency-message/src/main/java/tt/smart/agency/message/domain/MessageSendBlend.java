@@ -11,7 +11,7 @@ import tt.smart.agency.message.http.HttpRequestBase;
  * 通用消息推送对象
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

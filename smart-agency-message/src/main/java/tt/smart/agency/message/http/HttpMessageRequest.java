@@ -9,7 +9,7 @@ import cn.hutool.http.Method;
  * HTTP 请求
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class HttpMessageRequest {

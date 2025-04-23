@@ -5,7 +5,7 @@ package tt.smart.agency.cache.exception;
  * 缓存策略异常
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class CacheStrategyException extends RuntimeException {

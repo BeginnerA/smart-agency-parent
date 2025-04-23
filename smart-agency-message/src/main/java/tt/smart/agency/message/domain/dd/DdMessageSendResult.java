@@ -10,7 +10,7 @@ import tt.smart.agency.message.domain.MessageSendResult;
  * 钉钉消息推送结果
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

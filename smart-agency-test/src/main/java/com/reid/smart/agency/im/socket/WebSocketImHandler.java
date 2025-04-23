@@ -9,7 +9,7 @@ import org.springframework.web.socket.handler.AbstractWebSocketHandler;
  *
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class WebSocketImHandler extends AbstractWebSocketHandler {

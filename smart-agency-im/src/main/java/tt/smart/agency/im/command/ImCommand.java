@@ -5,7 +5,7 @@ package tt.smart.agency.im.command;
  * 即时通讯命令
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface ImCommand {

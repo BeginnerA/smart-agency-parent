@@ -9,7 +9,7 @@ import tt.smart.agency.message.service.wx.WxMpMessageImpl;
  * 微信公众号消息工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class WxMpMessageFactory implements BaseWxPlatformFactory<WxMpMessage, WxMpProperties> {

@@ -5,7 +5,7 @@ package tt.smart.agency.component.word.cache.manager;
  * 缓存读取
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface IFileLoader {

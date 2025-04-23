@@ -15,7 +15,7 @@ import java.io.InputStream;
  * 图片缓存处理
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Log4j2

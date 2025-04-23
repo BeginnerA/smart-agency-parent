@@ -9,7 +9,7 @@ import tt.smart.agency.message.service.sms.NeteaseSmsImpl;
  * 网易云短信工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class NeteaseFactory implements BaseSmsPlatformFactory<NeteaseSms, NeteaseProperties> {

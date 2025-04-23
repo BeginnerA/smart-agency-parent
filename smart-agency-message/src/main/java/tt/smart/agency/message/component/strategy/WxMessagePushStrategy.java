@@ -14,7 +14,7 @@ import tt.smart.agency.message.factory.wx.WxMessageFactory;
  * 微信消息推送策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class WxMessagePushStrategy extends AbstractMessagePushStrategy {

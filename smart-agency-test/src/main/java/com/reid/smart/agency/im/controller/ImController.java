@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 测试即时通讯
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @RestController

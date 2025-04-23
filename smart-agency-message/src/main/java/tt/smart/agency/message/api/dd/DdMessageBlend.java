@@ -8,7 +8,7 @@ import tt.smart.agency.message.domain.dd.DdBaseMessage;
  * 通用钉钉消息服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface DdMessageBlend<R extends MessageSendResult, M extends DdBaseMessage> {

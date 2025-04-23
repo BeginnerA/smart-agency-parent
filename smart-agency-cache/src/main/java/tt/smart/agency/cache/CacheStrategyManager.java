@@ -7,7 +7,7 @@ import tt.smart.agency.cache.strategy.CacheStrategy;
  * 缓存管理器
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class CacheStrategyManager {

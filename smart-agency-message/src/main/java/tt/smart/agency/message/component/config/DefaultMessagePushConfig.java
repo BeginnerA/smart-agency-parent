@@ -9,7 +9,7 @@ import java.util.List;
  * 默认的消息推送配置实现
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DefaultMessagePushConfig implements MessagePushConfig {

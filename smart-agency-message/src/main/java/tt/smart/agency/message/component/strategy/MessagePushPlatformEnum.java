@@ -12,7 +12,7 @@ import tt.smart.agency.message.enums.wx.WxPlatformType;
  * 消息推送平台枚举
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Getter

@@ -14,7 +14,7 @@ import java.util.Stack;
  * EL 表达式支持工具类
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @SuppressWarnings("rawtypes")

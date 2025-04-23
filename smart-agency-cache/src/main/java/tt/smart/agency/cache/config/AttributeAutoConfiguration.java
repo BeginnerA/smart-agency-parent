@@ -19,7 +19,7 @@ import tt.smart.agency.cache.factory.RedisCacheStrategyFactory;
  * 配置属性自动装配
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Slf4j

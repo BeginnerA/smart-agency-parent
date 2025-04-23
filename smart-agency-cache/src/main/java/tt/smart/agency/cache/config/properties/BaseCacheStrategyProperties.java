@@ -11,7 +11,7 @@ import tt.smart.agency.cache.enums.CacheType;
  * 缓存策略属性
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

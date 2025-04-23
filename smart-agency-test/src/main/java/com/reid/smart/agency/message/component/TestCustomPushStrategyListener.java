@@ -10,7 +10,7 @@ import tt.smart.agency.message.domain.MessageSendResult;
  * 测试自定义推送策略监听器
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Component

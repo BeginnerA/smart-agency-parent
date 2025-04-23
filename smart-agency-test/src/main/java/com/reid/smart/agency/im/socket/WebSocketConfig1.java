@@ -11,7 +11,7 @@
 // * WebSocket 实现方式一
 // * </p>
 // *
-// * @author YangMC
+// * @author MC_Yang
 // * @version V1.0
 // **/
 //@Configuration

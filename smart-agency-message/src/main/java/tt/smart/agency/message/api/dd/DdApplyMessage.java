@@ -9,7 +9,7 @@ import tt.smart.agency.message.domain.dd.DdMessageSendResult;
  * <a href="https://open.dingtalk.com/document/isvapp/send-job-notification">详情参考</a>
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface DdApplyMessage extends DdMessageBlend<DdMessageSendResult, DdMessage> {

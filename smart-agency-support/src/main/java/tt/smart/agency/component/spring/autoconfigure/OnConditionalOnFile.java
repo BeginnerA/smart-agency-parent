@@ -19,7 +19,7 @@ import java.util.List;
  * 检查特定的资源。
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class OnConditionalOnFile extends SpringBootCondition {

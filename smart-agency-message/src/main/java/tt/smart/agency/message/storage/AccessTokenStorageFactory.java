@@ -8,7 +8,7 @@ import tt.smart.agency.cache.strategy.CacheStrategy;
  * 访问令牌（ACCESS_TOKEN）存储服务工厂
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class AccessTokenStorageFactory {

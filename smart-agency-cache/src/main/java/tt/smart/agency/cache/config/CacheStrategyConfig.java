@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 缓存策略配置
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface CacheStrategyConfig extends Serializable {

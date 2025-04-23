@@ -11,7 +11,7 @@ import tt.smart.agency.message.service.AbstractMessageBlend;
  *
  * @param <R> 消息推送返回结果对象
  * @param <C> 消息配置对象
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractSmsMessage<R extends SmsResponseResult, C extends BaseSmsProperties>

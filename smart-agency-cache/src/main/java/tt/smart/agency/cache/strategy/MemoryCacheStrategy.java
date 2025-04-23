@@ -10,7 +10,7 @@ import cn.hutool.cache.impl.TimedCache;
  *
  * @param <K> 键类型
  * @param <V> 值类型
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class MemoryCacheStrategy<K, V> extends AbstractCacheStrategy<K, V> {

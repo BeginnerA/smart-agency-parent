@@ -21,7 +21,7 @@
 // * WebSocket 实现方式三
 // * </p>
 // *
-// * @author YangMC
+// * @author MC_Yang
 // * @version V1.0
 // **/
 //@Component

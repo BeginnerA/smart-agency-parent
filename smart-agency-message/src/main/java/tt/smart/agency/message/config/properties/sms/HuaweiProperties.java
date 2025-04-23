@@ -10,7 +10,7 @@ import lombok.experimental.SuperBuilder;
  * 华为云短信服务配置属性
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

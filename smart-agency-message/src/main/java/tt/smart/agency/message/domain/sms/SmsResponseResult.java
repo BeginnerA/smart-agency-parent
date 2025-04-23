@@ -9,7 +9,7 @@ import tt.smart.agency.message.domain.MessageSendResult;
  * 短信响应结果
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

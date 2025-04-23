@@ -8,7 +8,7 @@ import tt.smart.agency.message.domain.MessageSendBlend;
  * </p>
  *
  * @param <R> 消息推送返回结果对象
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface MessageBlend<R> {

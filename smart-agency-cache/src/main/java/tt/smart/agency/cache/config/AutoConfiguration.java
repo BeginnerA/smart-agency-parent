@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
  * 自动配置
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Import({AttributeAutoConfiguration.class, ServiceAutoConfiguration.class})

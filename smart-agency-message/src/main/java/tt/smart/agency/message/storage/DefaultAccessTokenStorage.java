@@ -10,7 +10,7 @@ import tt.smart.agency.message.domain.AccessToken;
  * 默认访问令牌（ACCESS_TOKEN）存储服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class DefaultAccessTokenStorage extends AbstractAccessTokenStorageBlend {

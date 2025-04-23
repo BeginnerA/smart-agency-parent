@@ -19,7 +19,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * </p>
  *
  * @param <C> 消息配置对象
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public abstract class AbstractAccessTokenBlend<C> extends HttpMessageRequest implements AccessTokenBlend {

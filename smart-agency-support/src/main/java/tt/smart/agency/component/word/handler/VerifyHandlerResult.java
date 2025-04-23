@@ -7,7 +7,7 @@ import lombok.Data;
  * 验证处理程序结果
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 @Data

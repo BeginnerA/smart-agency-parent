@@ -6,7 +6,7 @@
  * 一些产品作为项目中的缓存方案。因为每个缓存产品对数据的操作都不一样，所以该项目就是为了解决该问题而诞生来解决每个缓存操作数据不一样问题。
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 package tt.smart.agency.cache;

@@ -20,7 +20,7 @@ import java.util.*;
  * 华为云短信服务实现
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 

@@ -7,7 +7,7 @@ import java.util.Set;
  * 即时通讯会话服务
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public interface ImSessionService {

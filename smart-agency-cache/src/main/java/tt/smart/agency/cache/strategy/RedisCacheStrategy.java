@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * Redis 缓存策略
  * </p>
  *
- * @author YangMC
+ * @author MC_Yang
  * @version V1.0
  **/
 public class RedisCacheStrategy<K, V> extends AbstractCacheStrategy<K, V> {
