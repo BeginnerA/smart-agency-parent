@@ -10,18 +10,18 @@ import tt.smart.agency.cache.strategy.CacheStrategy;
  * @author MC_Yang
  * @version V1.0
  **/
+@SuppressWarnings({"unchecked", "rawtypes"})
 public class CacheStrategyManager {
 
-    private static CacheStrategy<String, Object> cacheStrategy;
+    private static CacheStrategy cacheStrategy;
 
     /**
      * 设置缓存策略
      *
      * @param cacheStrategy 缓存策略
      */
-    @SuppressWarnings({"unchecked", "rawtypes"})
     public static void setCacheStrategy(CacheStrategy cacheStrategy) {
-        CacheStrategyManager.cacheStrategy = (CacheStrategy<String, Object>) cacheStrategy;
+        CacheStrategyManager.cacheStrategy = cacheStrategy;
     }
 
     /**
