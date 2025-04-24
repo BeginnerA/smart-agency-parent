@@ -28,13 +28,13 @@ public @interface Query {
     QueryRule type() default QueryRule.EQ;
 
     /**
-     * 映射字段名<br/>
+     * 映射字段名<br>
      * 注意：映射别名只适用于简单场景查询，复杂查询请使用{@link #mapFun()}
      */
     String attr() default "";
 
     /**
-     * 映射函数<br/>
+     * 映射函数<br>
      * 注意：该类必须为{@link java.util.Function}或{@link java.util.Biffunction}实现，并且包含空构造函数。
      */
     Class<?> mapFun() default Void.class;

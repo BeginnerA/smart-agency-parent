@@ -22,9 +22,9 @@ import tt.smart.agency.message.enums.sms.MasSmsType;
 public class MasProperties extends BaseSmsProperties {
 
     /**
-     * 短信类型<br/>
-     * content：普通内容短信<br/>
-     * template：模板短信<br/>
+     * 短信类型<br>
+     * content：普通内容短信<br>
+     * template：模板短信<br>
      */
     @Builder.Default
     private MasSmsType smsType = MasSmsType.CONTENT;
@@ -45,9 +45,9 @@ public class MasProperties extends BaseSmsProperties {
     private String requestUrl;
 
     /**
-     * 发送普通内容地址{@code requestUrl + contentAddress}<br/>
-     * 这里需要注意，移动云发送普通内容短信地址 HTTP 和 HTTPS 是不一样的。<br/>
-     * HTTP：/sms/submit<br/>
+     * 发送普通内容地址{@code requestUrl + contentAddress}<br>
+     * 这里需要注意，移动云发送普通内容短信地址 HTTP 和 HTTPS 是不一样的。<br>
+     * HTTP：/sms/submit<br>
      * HTTPS：/sms/norsubmit
      */
     @Builder.Default

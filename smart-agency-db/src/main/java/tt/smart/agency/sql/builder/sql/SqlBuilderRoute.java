@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 
 /**
  * <p>
- * DQL 构造器<br/>
+ * DQL 构造器<br>
  * Sql Builder 顶部接口是一个引导程序
  * </p>
  *
@@ -36,7 +36,7 @@ public interface SqlBuilderRoute extends PreparedStatementSupport {
     Logger log = LoggerFactory.getLogger(SqlBuilderRoute.class);
 
     /**
-     * 核心方法<br/>
+     * 核心方法<br>
      * 它定义了如何构建 SQL 或 SQL 片段
      *
      * @return SQL 或 SQL 片段

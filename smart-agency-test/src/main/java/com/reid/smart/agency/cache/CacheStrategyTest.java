@@ -45,10 +45,6 @@ public class CacheStrategyTest {
 
     @Test
     public void testCacheStrategy() {
-
-        long between = DateUtil.between(new Date(), DateUtil.parse("2024-09-05"), DateUnit.DAY);
-        System.out.println(between);
-
         cacheStrategy.put("1", new JSONObject().putOnce("test", "11111111"), 5000);
         System.out.print("CacheStrategy——value：" + cacheStrategy.get("1") + "\n");
 
