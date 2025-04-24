@@ -18,15 +18,15 @@
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
 
-        <spring.boot.version>3.3.5</spring.boot.version>
-        <lombok.version>1.18.34</lombok.version>
-        <aspectj.version>1.9.22</aspectj.version>
-        <hutool.version>5.8.32</hutool.version>
-        <fastjson2.version>2.0.53</fastjson2.version>
-        <annotations.version>26.0.1</annotations.version>
-        <socketio.version>2.0.12</socketio.version>
-        <poi.version>5.3.0</poi.version>
-        <mybatis-plus.version>3.5.9</mybatis-plus.version>
+        <spring.boot.version>3.4.4</spring.boot.version>
+        <lombok.version>1.18.38</lombok.version>
+        <aspectj.version>1.9.24</aspectj.version>
+        <hutool.version>5.8.37</hutool.version>
+        <fastjson2.version>2.0.57</fastjson2.version>
+        <annotations.version>26.0.2</annotations.version>
+        <socketio.version>2.0.13</socketio.version>
+        <poi.version>5.4.1</poi.version>
+        <mybatis-plus.version>3.5.11</mybatis-plus.version>
     </properties>
 
     <dependencyManagement>
@@ -65,6 +65,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-json</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- spring-boot-starter-cache -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-cache</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <!-- spring-boot-starter-data-redis -->
