@@ -28,6 +28,7 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>tt.smart.agency</groupId>
             <artifactId>smart-agency-support</artifactId>
