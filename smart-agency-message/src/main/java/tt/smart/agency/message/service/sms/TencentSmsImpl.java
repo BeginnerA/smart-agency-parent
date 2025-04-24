@@ -7,6 +7,7 @@ import cn.hutool.crypto.digest.HmacAlgorithm;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
+import org.jetbrains.annotations.NotNull;
 import tt.smart.agency.message.api.sms.TencentSms;
 import tt.smart.agency.message.config.properties.sms.TencentProperties;
 import tt.smart.agency.message.domain.MessageSendBlend;
@@ -39,7 +40,7 @@ public class TencentSmsImpl extends AbstractSmsMessage<SmsResponseResult, Tencen
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String message) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String message) {
         String[] split = message.split("&");
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
         for (int i = 0; i < split.length; i++) {
@@ -49,7 +50,7 @@ public class TencentSmsImpl extends AbstractSmsMessage<SmsResponseResult, Tencen
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String templateId, LinkedHashMap<String, String> messages) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String templateId, LinkedHashMap<String, String> messages) {
         List<String> messageList = new ArrayList<>();
         for (Map.Entry<String, String> entry : messages.entrySet()) {
             messageList.add(entry.getValue());

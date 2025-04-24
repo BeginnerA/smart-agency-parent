@@ -27,7 +27,8 @@ public class SmsMessageTest {
     /**
      * 填测试手机号
      */
-    private static final String PHONE = "182xxxxxxxx";
+//    private static final String PHONE = "182xxxxxxxx";
+    private static final String PHONE = "15587100090";
 
     /**
      * 开始
@@ -88,6 +89,15 @@ public class SmsMessageTest {
     @Test
     public void neteaseSmsTest() {
         SmsResponseResult smsResponseResult = SmsMessageFactory.createSmsBlend(SupplierPlatformType.NETEASE).sendMessage(PHONE, "10101");
+        System.out.print("结果：" + smsResponseResult);
+    }
+
+    /**
+     * 移动云短信测试
+     */
+    @Test
+    public void masSmsTest() {
+        SmsResponseResult smsResponseResult = SmsMessageFactory.createSmsBlend(SupplierPlatformType.MAS).sendMessage(PHONE, "移动短信：http请求测试");
         System.out.print("结果：" + smsResponseResult);
     }
 

@@ -1,5 +1,6 @@
 package tt.smart.agency.message.api.sms;
 
+import org.jetbrains.annotations.NotNull;
 import tt.smart.agency.message.domain.sms.SmsResponseResult;
 
 import java.util.LinkedHashMap;
@@ -21,7 +22,7 @@ public interface SmsMessageBlend {
      * @param message 消息内容
      * @return 响应结果
      */
-    SmsResponseResult sendMessage(String phone, String message);
+    SmsResponseResult sendMessage(@NotNull String phone, @NotNull String message);
 
     /**
      * 推送消息
@@ -31,6 +32,6 @@ public interface SmsMessageBlend {
      * @param messages   消息模板参数。key 为模板变量名称 value 为模板变量值
      * @return 响应结果
      */
-    SmsResponseResult sendMessage(String phone, String templateId, LinkedHashMap<String, String> messages);
+    SmsResponseResult sendMessage(@NotNull String phone, @NotNull String templateId, LinkedHashMap<String, String> messages);
 
 }

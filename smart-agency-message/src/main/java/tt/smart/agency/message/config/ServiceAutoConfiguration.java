@@ -83,4 +83,11 @@ public class ServiceAutoConfiguration {
         return (NeteaseSms) SmsMessageFactory.createSmsBlend(SupplierPlatformType.NETEASE);
     }
 
+    @Bean
+    @ConditionalOnBean(MasProperties.class)
+    @ConditionalOnMissingBean
+    public MasSms initMasSmsService() {
+        return (MasSms) SmsMessageFactory.createSmsBlend(SupplierPlatformType.MAS);
+    }
+
 }

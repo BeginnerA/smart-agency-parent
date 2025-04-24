@@ -2,6 +2,7 @@ package tt.smart.agency.message.service.sms;
 
 import cn.hutool.core.codec.Base64;
 import com.alibaba.fastjson2.JSONObject;
+import org.jetbrains.annotations.NotNull;
 import tt.smart.agency.message.api.sms.HuaweiSms;
 import tt.smart.agency.message.config.properties.sms.HuaweiProperties;
 import tt.smart.agency.message.domain.MessageSendBlend;
@@ -47,14 +48,14 @@ public class HuaweiSmsImpl extends AbstractSmsMessage<SmsResponseResult, HuaweiP
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String message) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String message) {
         LinkedHashMap<String, String> mes = new LinkedHashMap<>();
         mes.put(UUID.randomUUID().toString().replaceAll("-", ""), message);
         return sendMessage(phone, huaweiSmsConfig.getTemplateId(), mes);
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String templateId, LinkedHashMap<String, String> messages) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String templateId, LinkedHashMap<String, String> messages) {
         List<String> list = new ArrayList<>();
         for (Map.Entry<String, String> entry : messages.entrySet()) {
             list.add(entry.getValue());

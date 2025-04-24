@@ -5,6 +5,7 @@ import cn.hutool.crypto.digest.HMac;
 import cn.hutool.crypto.digest.HmacAlgorithm;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson2.JSONObject;
+import org.jetbrains.annotations.NotNull;
 import tt.smart.agency.message.api.sms.CtyunSms;
 import tt.smart.agency.message.config.properties.sms.CtyunProperties;
 import tt.smart.agency.message.domain.MessageSendBlend;
@@ -36,14 +37,14 @@ public class CtyunSmsImpl extends AbstractSmsMessage<SmsResponseResult, CtyunPro
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String message) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String message) {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
         map.put(ctyunSmsConfig.getTemplateName(), message);
         return sendMessage(phone, ctyunSmsConfig.getTemplateId(), map);
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String templateId, LinkedHashMap<String, String> messages) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String templateId, LinkedHashMap<String, String> messages) {
         MessageSendBlend messageSend;
         try {
             ctyunSmsConfig.checkIntegrity();

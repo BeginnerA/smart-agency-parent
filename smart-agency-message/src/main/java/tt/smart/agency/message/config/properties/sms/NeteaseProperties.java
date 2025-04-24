@@ -31,7 +31,6 @@ public class NeteaseProperties extends BaseSmsProperties {
     @Builder.Default
     private String templateUrl = "https://api.netease.im/sms/sendtemplate.action";
 
-
     /**
      * 验证码短信请求地址
      */

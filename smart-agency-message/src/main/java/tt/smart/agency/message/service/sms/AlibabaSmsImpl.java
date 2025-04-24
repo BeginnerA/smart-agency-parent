@@ -4,6 +4,7 @@ import cn.hutool.crypto.digest.HMac;
 import cn.hutool.crypto.digest.HmacAlgorithm;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson2.JSONObject;
+import org.jetbrains.annotations.NotNull;
 import tt.smart.agency.message.api.sms.AlibabaSms;
 import tt.smart.agency.message.config.properties.sms.AlibabaProperties;
 import tt.smart.agency.message.domain.MessageSendBlend;
@@ -33,14 +34,14 @@ public class AlibabaSmsImpl extends AbstractSmsMessage<SmsResponseResult, Alibab
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String message) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String message) {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
         map.put(alibabaSmsConfig.getTemplateName(), message);
         return sendMessage(phone, alibabaSmsConfig.getTemplateId(), map);
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String templateId, LinkedHashMap<String, String> messages) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String templateId, LinkedHashMap<String, String> messages) {
         String messageStr = JSONUtil.toJsonStr(messages);
         return smsResponse(phone, messageStr, templateId);
     }

@@ -28,7 +28,7 @@ public class HuaweiProperties extends BaseSmsProperties {
      */
     private String statusCallBack;
     /**
-     * APP接入地址
+     * APP 接入地址
      */
     private String url;
 

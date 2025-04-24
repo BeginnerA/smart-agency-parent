@@ -38,6 +38,10 @@ public enum SupplierPlatformType implements PlatformType {
      * 网易云
      */
     NETEASE("网易云短信", NeteaseFactory.instance()),
+    /**
+     * 移动云
+     */
+    MAS("移动云短信", MasFactory.instance()),
     ;
 
     /**

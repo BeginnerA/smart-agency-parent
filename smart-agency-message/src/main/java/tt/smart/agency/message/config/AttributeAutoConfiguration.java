@@ -87,4 +87,12 @@ public class AttributeAutoConfiguration {
         return NeteaseFactory.instance().buildConfig();
     }
 
+    @Bean
+    @ConditionalOnMissingBean
+    @ConditionalOnProperty(prefix = "agency.message.sms.mas", name = "ec-name")
+    @ConfigurationProperties(prefix = "agency.message.sms.mas")
+    protected MasProperties masConfig() {
+        return MasFactory.instance().buildConfig();
+    }
+
 }

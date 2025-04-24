@@ -5,6 +5,7 @@ import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
+import org.jetbrains.annotations.NotNull;
 import tt.smart.agency.message.api.sms.NeteaseSms;
 import tt.smart.agency.message.config.properties.sms.NeteaseProperties;
 import tt.smart.agency.message.domain.MessageSendBlend;
@@ -39,14 +40,14 @@ public class NeteaseSmsImpl extends AbstractSmsMessage<SmsResponseResult, Neteas
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String message) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String message) {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
         map.put(neteaseSmsConfig.getTemplateName(), message);
         return sendMessage(phone, neteaseSmsConfig.getTemplateId(), map);
     }
 
     @Override
-    public SmsResponseResult sendMessage(String phone, String templateId, LinkedHashMap<String, String> messages) {
+    public SmsResponseResult sendMessage(@NotNull String phone, @NotNull String templateId, LinkedHashMap<String, String> messages) {
         MessageSendBlend messageSend;
         try {
             neteaseSmsConfig.checkIntegrity();
