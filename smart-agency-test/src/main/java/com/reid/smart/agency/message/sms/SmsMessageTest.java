@@ -27,8 +27,7 @@ public class SmsMessageTest {
     /**
      * 填测试手机号
      */
-//    private static final String PHONE = "182xxxxxxxx";
-    private static final String PHONE = "15587100090";
+    private static final String PHONE = "182xxxxxxxx";
 
     /**
      * 开始
