@@ -148,11 +148,7 @@ public final class PoiReflectorTools {
 
     private void addMethodConflict(Map<String, List<Method>> conflictingMethods, String name,
                                    Method method) {
-        List<Method> list = conflictingMethods.get(name);
-        if (list == null) {
-            list = new ArrayList<Method>();
-            conflictingMethods.put(name, list);
-        }
+        List<Method> list = conflictingMethods.computeIfAbsent(name, k -> new ArrayList<Method>());
         list.add(method);
     }
 
@@ -201,7 +197,7 @@ public final class PoiReflectorTools {
                     // Ignored. This is only a final precaution, nothing we can do.
                 }
             }
-            if (field.isAccessible() && !"serialVersionUID".equalsIgnoreCase(field.getName())) {
+            if (field.canAccess(null) && !"serialVersionUID".equalsIgnoreCase(field.getName())) {
                 this.fieldList.add(field);
             }
             if (Modifier.isPublic(field.getModifiers())) {
@@ -244,7 +240,7 @@ public final class PoiReflectorTools {
 
         Collection<Method> methods = uniqueMethods.values();
 
-        return methods.toArray(new Method[methods.size()]);
+        return methods.toArray(new Method[0]);
     }
 
     private void addUniqueMethods(HashMap<String, Method> uniqueMethods, Method[] methods) {
@@ -272,9 +268,7 @@ public final class PoiReflectorTools {
     private String getSignature(Method method) {
         StringBuilder sb = new StringBuilder();
         Class<?> returnType = method.getReturnType();
-        if (returnType != null) {
-            sb.append(returnType.getName()).append('#');
-        }
+        sb.append(returnType.getName()).append('#');
         sb.append(method.getName());
         Class<?>[] parameters = method.getParameterTypes();
         for (int i = 0; i < parameters.length; i++) {
@@ -304,7 +298,7 @@ public final class PoiReflectorTools {
         if (publicField.get(propertyName) != null) {
             try {
                 return this.getClass().getMethod("publicField", Void.class);
-            } catch (NoSuchMethodException e) {
+            } catch (NoSuchMethodException ignored) {
             }
         }
         Method method = getMethods.get(propertyName);
@@ -363,7 +357,7 @@ public final class PoiReflectorTools {
             try {
                 publicField.get(property).set(obj, object);
                 return true;
-            } catch (IllegalAccessException e) {
+            } catch (IllegalAccessException ignored) {
 
             }
         }
